@@ -1,0 +1,73 @@
+{
+  "name": "elucidator-blog-starter",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "cross-env NODE_ENV=production vite-ssg build",
+    "serve": "vite preview",
+    "format": "prettier --write './**/*.{vue,js,ts}'",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "author": "Satya Wikananda <satyawikananda456@gmail.com>",
+  "keywords": [
+    "blog",
+    "blog-starter",
+    "template-starter",
+    "typescript",
+    "vite",
+    "vue",
+    "windicss"
+  ],
+  "dependencies": {
+    "@iconify/iconify": "^2.1.2",
+    "@vueuse/core": "^6.9.2",
+    "@vueuse/head": "^0.5.1",
+    "nprogress": "^0.2.0",
+    "prism-theme-vars": "^0.2.2",
+    "vue": "^3.2.31",
+    "vue-disqus": "^5.1.0",
+    "vue-router": "^4.0.13",
+    "vue-social-sharing": "^4.0.0-alpha4",
+    "workbox-window": "^6.5.0"
+  },
+  "devDependencies": {
+    "@iconify/json": "^1.1.461",
+    "@satyawikananda/prettier-config": "^0.0.3",
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^15.14.9",
+    "@types/nprogress": "^0.2.0",
+    "@vitejs/plugin-vue": "^1.10.2",
+    "@vue/compiler-sfc": "^3.2.31",
+    "@vue/server-renderer": "^3.2.31",
+    "cross-env": "^7.0.3",
+    "gray-matter": "^4.0.3",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "markdown-it": "^12.3.2",
+    "markdown-it-anchor": "^8.4.1",
+    "markdown-it-link-attributes": "^3.0.0",
+    "markdown-it-prism": "^2.2.3",
+    "markdown-it-table-of-contents": "^0.5.2",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.5.1",
+    "prismjs": "^1.27.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "typescript": "^4.6.2",
+    "unplugin-auto-import": "^0.4.20",
+    "unplugin-icons": "^0.12.23",
+    "unplugin-vue-components": "^0.14.13",
+    "vite": "^2.8.6",
+    "vite-plugin-md": "^0.6.7",
+    "vite-plugin-pages": "^0.12.2",
+    "vite-plugin-purge-icons": "^0.7.0",
+    "vite-plugin-pwa": "^0.8.2",
+    "vite-plugin-windicss": "^0.16.7",
+    "vite-ssg": "^0.11.4",
+    "vue-tsc": "^0.0.24",
+    "windicss": "^3.5.0"
+  }
+}
