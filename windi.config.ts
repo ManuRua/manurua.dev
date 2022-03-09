@@ -12,7 +12,6 @@ export default defineConfig({
     },
     extend: {
       colors: {
-        // The colors was inspired from kirito's elucidator sword color
         elucidator: {
           "50": "#f6f7f9",
           "100": "#edeff2",
@@ -25,7 +24,6 @@ export default defineConfig({
           "800": "#3f475a",
           "900": "#313745",
         },
-        // The colors was inspired from kirito's dark repulser sword color
         "dark-repulser": {
           "50": "#f1f9f8",
           "100": "#f1f9f8",
@@ -38,6 +36,11 @@ export default defineConfig({
           "800": "#21504a",
           "900": "#1f4c47",
         },
+        "underline": {
+          "yellow": "#FFD27D",
+          "blue": "#5DE1F1",
+          "red": "#C6001F",
+        }
       },
     },
   },

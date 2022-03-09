@@ -45,15 +45,15 @@ router.afterEach(() => {
 // Navbar list
 const dataNavbar: NavbarMenu[] = [
   {
-    name: "Home",
+    name: "inicio",
     to: "/",
   },
   {
-    name: "Articles",
+    name: "blog",
     to: "/articles",
   },
   {
-    name: "About",
+    name: "sobre mí",
     to: "/about",
   },
 ]
@@ -68,14 +68,19 @@ const dataNavbar: NavbarMenu[] = [
     <div class="max-w-screen-lg mx-auto h-full flex flex-row items-center space-x-4">
       <div class="logo flex-1">
         <router-link to="/" class="font-bold lg:tracking-wide text-2xl">
-          Elucidator Blog
+          <img
+            src="/src/assets/images/rua.svg"
+            alt="Logo Rúa"
+            class="w-16"
+            loading="lazy"
+          />
         </router-link>
       </div>
       <div class="flex flex-wrap items-center">
         <router-link
           v-for="(data, i) in dataNavbar"
           :key="i"
-          class="mr-5 py-1.5 px-3 rounded-md text-elucidator-700 dark:text-dark-repulser-400 dark:hover:text-elucidator-300 hover:text-gray-900 hidden lg:block"
+          class="mr-5 py-0.5 px-2 rounded-lg text-elucidator-700 dark:text-dark-repulser-400 dark:hover:text-elucidator-300 hover:text-gray-900 hidden lg:block"
           :to="data.to"
           active-class="bg-gray-200 dark:bg-gray-500 dark:text-dark-repulser-200"
           >{{ data.name }}</router-link

@@ -15,19 +15,12 @@ const articles = computed(() => {
 
 <template>
   <div class="inline-grid px-4 lg:px-0">
-    <h1 class="mb-5 text-3xl text-elucidator-700 dark:text-dark-repulser-400 font-bold">
-      Latest Article
+    <h3 class="mt-10vh text-xl text-elucidator-700 dark:text-dark-repulser-400 font-bold uppercase tracking-widest opacity-50">
+      hey! soy Manu Rúa
+    </h3>
+    <h1 class="mt-9 mb-10vh leading-tight text-5xl <sm:text-4xl text-elucidator-900 dark:text-dark-repulser-400 font-normal max-w-4xl">
+      <span class="font-bold underline underline-underline-yellow underline-2 underline-offset-4">Ingeniero</span> <span class="font-bold underline underline-underline-yellow underline-2 underline-offset-4">software</span> y <span class="font-bold underline underline-underline-blue underline-2 underline-offset-4">creador</span> <span class="font-bold underline underline-underline-blue underline-2 underline-offset-4">digital</span> en remoto desde <span class="font-bold underline underline-underline-red underline-2 underline-offset-4">Sevilla</span> 💃🏻
     </h1>
-    <Latest
-      :image="latest.thumbnail"
-      :alt="`blog-banner-${slug(latest.name)}`"
-      :tags="latest.tags"
-      :date="`${new Date(latest.date).toDateString()}`"
-      :title="latest.name"
-      :description="limitString(latest.description, 200)"
-      :to="articles[0].path"
-      :to-tags="`/tags/${latest.tags}`"
-    />
   </div>
   <div class="flex flex-col flex-wrap mb-2 mt-12 px-4 lg:px-0">
     <div class="grid inline-grid grid-cols-2 mb-5">

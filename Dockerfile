@@ -1,7 +1,7 @@
 FROM node:latest
 USER node
 
-LABEL MAINTAINER="Iwan Firmawan <firmawaneiwan@gmail.com>"
+LABEL MAINTAINER="Manuel Rúa <manuruaco@gmail.com>"
 
 RUN mkdir /home/node/.npm-global
 ENV PATH=/home/node/.npm-global/bin:$PATH
