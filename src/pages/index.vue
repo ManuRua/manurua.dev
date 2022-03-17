@@ -2,10 +2,12 @@
 import { latestArticle, getArticles } from "~/data"
 import { limitString, slug } from "~/utils"
 
+const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
+
 // Get latest article
-const latest = computed(() => {
-  return latestArticle()
-})
+// const latest = computed(() => {
+//   return latestArticle()
+// })
 
 // Get articles data
 const articles = computed(() => {
@@ -23,12 +25,12 @@ const articles = computed(() => {
     </h1>
   </div>
   <div class="flex flex-col flex-wrap mb-2 mt-12 px-4 lg:px-0">
-    <div class="grid inline-grid grid-cols-2 mb-5">
-      <h1 class="text-3xl font-bold text-elucidator-700 dark:text-dark-repulser-400">All post</h1>
+    <div class="flex justify-between mb-5">
+      <h2 class="py-0.5 px-2 bg-gray-200 rounded-lg text-2xl self-center font-bold text-elucidator-900 dark:text-dark-repulser-400">b-log</h2>
       <router-link
         to="/articles"
-        class="cursor-pointer text-right my-auto text-elucidator-700 dark:text-dark-repulser-400"
-        >See all</router-link
+        class="cursor-pointer text-right text-base my-auto py-2 px-5 bg-blue-500 rounded-full text-white dark:text-dark-repulser-400"
+        >ver todos</router-link
       >
     </div>
     <div
@@ -40,10 +42,9 @@ const articles = computed(() => {
         :image="data.meta.frontmatter.thumbnail"
         :alt="`blog-banner-${slug(data.meta.frontmatter.name)}`"
         :tags="data.meta.frontmatter.tags"
-        :date="`${new Date(data.meta.frontmatter.date).toDateString()}`"
+        :date="`${new Date(data.meta.frontmatter.date).toLocaleDateString('es-ES', dateOptions)}`"
         :title="data.meta.frontmatter.name"
         :to="data.path"
-        :description="limitString(data.meta.frontmatter.description, 100)"
         :to-tags="`/tags/${data.meta.frontmatter.tags}`"
       />
     </div>

@@ -5,7 +5,6 @@ const props = defineProps<{
   tags: Array<string>
   date: string
   title: string
-  description?: string
   to: string
   toTags: string
 }>()
@@ -22,9 +21,6 @@ const props = defineProps<{
           $props.date
         }}</span>
         <h1 class="text-xl text-elucidator-800 font-bold p-1 mb-1">{{ $props.title }}</h1>
-        <p :class="`text-sm text-elucidator-700 dark:text-elucidator-700 font-extralight mb-5 p-1`">
-          {{ $props.description }}
-        </p>
       </div>
       <div class="article-content-bottom">
         <Tag :tags="$props.tags" class="mb-5 flex flex-wrap flex-row justify-start" />

@@ -49,7 +49,7 @@ const dataNavbar: NavbarMenu[] = [
     to: "/",
   },
   {
-    name: "blog",
+    name: "b-log",
     to: "/articles",
   },
   {
@@ -69,7 +69,7 @@ const dataNavbar: NavbarMenu[] = [
       <div class="logo flex-1">
         <router-link to="/" class="font-bold lg:tracking-wide text-2xl">
           <img
-            src="/src/assets/images/rua.svg"
+            src="/images/rua.svg"
             alt="Logo Rúa"
             class="w-16"
             loading="lazy"
@@ -106,7 +106,7 @@ const dataNavbar: NavbarMenu[] = [
           title="Search articles.."
         />
         <a
-          href="https://github.com/satyawikananda/elucidator-blog-starter"
+          href="https://github.com/ManuRua"
           target="_blank"
           rel="noreferrer"
           title="repository github"
@@ -132,7 +132,7 @@ const dataNavbar: NavbarMenu[] = [
     <ul class="flex flex-col">
       <router-link to="/" class="bg-elucidator-50 dark:bg-elucidator-500 p-2 mb-2 rounded-md">
         <li class="flex flex-row flex-wrap items-center dark:text-elucidator-100">
-          <carbon-home class="mr-2" />Home
+          <carbon-home class="mr-2" />inicio
         </li>
       </router-link>
       <router-link
@@ -140,12 +140,12 @@ const dataNavbar: NavbarMenu[] = [
         class="bg-elucidator-50 dark:bg-elucidator-500 p-2 mb-2 rounded-md"
       >
         <li class="flex flex-row flex-wrap items-center dark:text-elucidator-100">
-          <carbon-table-of-contents class="mr-2" />Articles
+          <carbon-table-of-contents class="mr-2" />b-log
         </li>
       </router-link>
       <router-link to="/about" class="bg-elucidator-50 dark:bg-elucidator-500 p-2 mb-2 rounded-md">
         <li class="flex flex-row flex-wrap items-center dark:text-elucidator-100">
-          <uil-document-layout-center class="mr-2" />About
+          <uil-document-layout-center class="mr-2" />sobre mí
         </li>
       </router-link>
     </ul>
@@ -165,7 +165,7 @@ const dataNavbar: NavbarMenu[] = [
         v-model="searchArticle"
         type="text"
         class="bg-white shadow rounded border-0 w-lg h-14 py-5 px-5 focus:outline-none"
-        placeholder="Search articles here..."
+        placeholder="Buscar posts aquí..."
         @keydown.enter="goSearch"
       />
     </div>
