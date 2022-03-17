@@ -2,11 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#347f76" />
-    <link rel="apple-touch-icon" href="/pwa-assets/192.png" />
-    <link rel="mask-icon" href="/pwa-assets/192.png" color="#347f76" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@200;400;600&display=swap"
       rel="stylesheet"
@@ -17,9 +14,28 @@
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
     <script>
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+      let path;
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         document.documentElement.classList.add("dark")
-      else document.documentElement.classList.add("light")
+        path = 'favicon-light'
+      } else {
+        document.documentElement.classList.add("light")
+        path = 'favicon-dark'
+      }
+      const links = [
+        '<link rel="apple-touch-icon" href="' + path + '/apple-touch-icon.png" />',
+        '<link rel="mask-icon" href="' + path + '/android-chrome-192x192.png" />',
+        '<link rel="icon" type="image/png" sizes="32x32" href="' + path + '/favicon-32x32.png" />',
+        '<link rel="icon" type="image/png" sizes="16x16" href="' + path + '/favicon-16x16.png" />',
+        '<link rel="icon" href="' + path + '/favicon.ico" />',
+        '<link rel="manifest" href="' + path + '/site.webmanifest">'
+      ]
+      links.forEach(link => {
+        const placeholder = document.createElement('div');
+        placeholder.innerHTML = link
+        const node = placeholder.firstElementChild;
+        document.head.append(node)
+      })
     </script>
   </body>
 </html>

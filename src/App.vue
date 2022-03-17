@@ -2,7 +2,7 @@
 // In this section, we use @vueuse/head. Check this for more detail
 // https://github.com/vueuse/head
 useHead({
-  title: "Elucidator Blog Starter",
+  title: "Manu Rúa | Ingeniero Software",
   meta: [
     {
       name: "description",

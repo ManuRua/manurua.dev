@@ -36,7 +36,7 @@ export default defineConfig({
           "800": "#21504a",
           "900": "#1f4c47",
         },
-        "underline": {
+        underline: {
           "yellow": "#FFD27D",
           "blue": "#5DE1F1",
           "red": "#C6001F",

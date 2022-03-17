@@ -117,26 +117,26 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
-      includeAssets: ["favicon.ico", "robots.txt"],
+      includeAssets: ["/favicon-dark/favicon.ico", "robots.txt"],
       manifest: {
         // You can change this name into your own
-        name: "Elucidator Blog Starter",
-        short_name: "Elucidator",
-        description: "A blog starter with Vite.js",
+        name: "Manu Rúa | Ingeniero Software",
+        short_name: "Manu Rúa",
+        description: "Blog y web personal de Manu Rúa",
         theme_color: "#347f76",
         icons: [
           {
-            src: "/pwa-assets/192.png",
+            src: "/favicon-dark/android-chrome-192x192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "/pwa-assets/512.png",
+            src: "/favicon-dark/android-chrome-512x512.png",
             sizes: "512x512",
             type: "image/png",
           },
           {
-            src: "/pwa-assets/512.png",
+            src: "/favicon-dark/android-chrome-512x512.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "any maskable",
