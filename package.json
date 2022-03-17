@@ -1,5 +1,5 @@
 {
-  "name": "elucidator-blog-starter",
+  "name": "manu-rua-blog-portfolio",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
@@ -11,7 +11,7 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "author": "Satya Wikananda <satyawikananda456@gmail.com>",
+  "author": "Manu Rúa <manuruaco@gmail.com>",
   "keywords": [
     "blog",
     "blog-starter",

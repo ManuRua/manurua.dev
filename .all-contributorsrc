@@ -6,10 +6,10 @@
   "commit": false,
   "contributors": [
     {
-      "login": "satyawikananda",
-      "name": "I Gusti Ngurah Satya Wikananda",
-      "avatar_url": "https://avatars.githubusercontent.com/u/33148052?v=4",
-      "profile": "https://satyawikananda.vercel.app",
+      "login": "ManuRua",
+      "name": "Manu Rúa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9351039?v=4",
+      "profile": "https://github.com/ManuRua",
       "contributions": [
         "code",
         "doc",
@@ -20,8 +20,8 @@
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "elucidator-blog-starter",
-  "projectOwner": "satyawikananda",
+  "projectName": "manurua.dev",
+  "projectOwner": "ManuRua",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true
