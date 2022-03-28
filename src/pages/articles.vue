@@ -44,6 +44,7 @@ const clickEndPage = () => {
         :alt="`blog-banner-${slug(data.meta.frontmatter.name)}`"
         :tags="data.meta.frontmatter.tags"
         :date="`${new Date(data.meta.frontmatter.date).toLocaleDateString('es-ES', dateOptions)}`"
+        :time="data.meta.frontmatter.time"
         :title="data.meta.frontmatter.name"
         :to="data.path"
         :to-tags="`/tags/${data.meta.frontmatter.tags}`"

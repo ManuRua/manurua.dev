@@ -22,16 +22,16 @@
     "windicss"
   ],
   "dependencies": {
-    "@iconify/iconify": "^2.1.2",
+    "@iconify/iconify": "^2.2.0",
     "@vueuse/core": "^6.9.2",
     "@vueuse/head": "^0.5.1",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.2",
     "vue": "^3.2.31",
     "vue-disqus": "^5.1.0",
-    "vue-router": "^4.0.13",
+    "vue-router": "^4.0.14",
     "vue-social-sharing": "^4.0.0-alpha4",
-    "workbox-window": "^6.5.0"
+    "workbox-window": "^6.5.2"
   },
   "devDependencies": {
     "@iconify/json": "^1.1.461",
@@ -45,18 +45,18 @@
     "cross-env": "^7.0.3",
     "gray-matter": "^4.0.3",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.4",
+    "lint-staged": "^12.3.7",
     "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^8.4.1",
     "markdown-it-link-attributes": "^3.0.0",
     "markdown-it-prism": "^2.2.3",
     "markdown-it-table-of-contents": "^0.5.2",
     "node-sass": "^6.0.1",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.1",
     "prismjs": "^1.27.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
-    "typescript": "^4.6.2",
+    "typescript": "^4.6.3",
     "unplugin-auto-import": "^0.4.20",
     "unplugin-icons": "^0.12.23",
     "unplugin-vue-components": "^0.14.13",
@@ -69,6 +69,6 @@
     "vite-ssg": "^0.11.4",
     "vite-svg-loader": "^3.1.2",
     "vue-tsc": "^0.0.24",
-    "windicss": "^3.5.0"
+    "windicss": "^3.5.1"
   }
 }

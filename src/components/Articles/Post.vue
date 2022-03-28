@@ -86,7 +86,7 @@ if (isClient) {
 </script>
 
 <template>
-  <div class="py-5 px-4">
+  <div class="py-5 px-4 lg:px-0">
     <h1
       class="pb-5 text-base-900 dark:text-base-50 text-left font-bold text-3xl md:block md:text-5xl"
     >
@@ -109,7 +109,7 @@ if (isClient) {
         </p>
       </div>
     </div>
-    <Tag :tags="frontmatter.tags" class="mb-5 flex flex-row justify-left" />
+    <Tag :tags="frontmatter.tags" class="mb-5 flex flex-row justify-left flex-wrap" />
     <img
       :src="frontmatter.thumbnail"
       :alt="`thumbnail-${frontmatter.name}`"
