@@ -88,28 +88,28 @@ if (isClient) {
 <template>
   <div class="py-5 px-4">
     <h1
-      class="pb-5 bg-clip-text bg-gradient-to-r text-center font-bold text-5xl from-elucidator-500 to-elucidator-700 dark:from-dark-repulser-500 dark:to-dark-repulser-300 md:block"
+      class="pb-5 text-base-900 dark:text-base-50 text-left font-bold text-3xl md:block md:text-5xl"
     >
       {{ frontmatter.name }}
     </h1>
-    <div class="flex flex-row flex-wrap justify-center">
+    <div class="flex flex-row <sm:flex-col flex-wrap justify-left">
       <div class="flex">
-        <carbon-calendar class="mr-1 mt-2px dark:text-elucidator-50" />
-        <p class="text-center text-dark-100 font-light mb-1 sm:mb-5 dark:text-elucidator-50">
+        <carbon-calendar class="mr-1 mt-2px dark:text-base-50" />
+        <p class="text-center text-dark-100 font-light mb-1 sm:mb-5 dark:text-base-50">
           {{ new Date(frontmatter.date).toLocaleDateString("es-ES", dateOptions) }}
         </p>
       </div>
-      <p class="text-center text-dark-100 font-light mb-5 mx-4 dark:text-elucidator-50 <sm:hidden">
+      <p class="text-center text-dark-100 font-light mb-5 mx-4 dark:text-base-50 <sm:hidden">
          · 
       </p>
       <div class="flex">
-        <carbon-time class="mr-1 mt-2px dark:text-elucidator-50" />
-        <p class="text-center text-dark-100 font-light mb-5 dark:text-elucidator-50">
+        <carbon-time class="mr-1 mt-2px dark:text-base-50" />
+        <p class="text-center text-dark-100 font-light mb-5 dark:text-base-50">
           {{ frontmatter.time }} minutos de lectura
         </p>
       </div>
     </div>
-    <Tag :tags="frontmatter.tags" class="mb-5 flex flex-row justify-center" />
+    <Tag :tags="frontmatter.tags" class="mb-5 flex flex-row justify-left" />
     <img
       :src="frontmatter.thumbnail"
       :alt="`thumbnail-${frontmatter.name}`"
@@ -117,13 +117,13 @@ if (isClient) {
       loading="lazy"
     />
     <div
-      class="mt-5 mb-5 text-elucidator-500 divide-y dark:text-elucidator-50"
+      class="mt-5 mb-5 text-base-500 divide-y dark:text-base-50"
       style="border-bottom: 1px solid #63c0b6"
     >
       <slot />
     </div>
     <h2
-      class="text-center text-3xl font-bold text-elucidator-700 dark:text-dark-repulser-400 mt-5 mb-4"
+      class="text-center text-3xl font-bold text-base-700 dark:text-base-400 mt-5 mb-4"
     >
       Compártelo a tu gente
     </h2>
@@ -149,7 +149,7 @@ if (isClient) {
       </client-only>
     </div>
     <div class="flex flex-wrap flex-col px-4 lg:px-0">
-      <h1 class="mb-5 mt-8 text-3xl text-elucidator-700 dark:text-dark-repulser-400 font-bold">
+      <h1 class="mb-5 mt-8 text-3xl text-base-700 dark:text-base-400 font-bold">
         Artículos Relacionados
       </h1>
       <div class="mx-auto grid inline-grid gap-4 mb-5 lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2">

@@ -6,12 +6,12 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply rounded-md bg-elucidator-300 dark:bg-dark-repulser-300;
+  @apply rounded-md bg-base-300 dark:bg-base-300;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-md bg-elucidator-500 dark:bg-dark-repulser-500;
+  @apply rounded-md bg-base-500 dark:bg-base-500;
   &:hover {
-    @apply bg-elucidator-700 dark:bg-dark-repulser-600;
+    @apply bg-base-700 dark:bg-base-600;
   }
 }

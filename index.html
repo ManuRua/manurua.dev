@@ -17,10 +17,10 @@
       let path;
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         document.documentElement.classList.add("dark")
-        path = 'favicon-light'
+        path = '/favicon-light'
       } else {
         document.documentElement.classList.add("light")
-        path = 'favicon-dark'
+        path = '/favicon-dark'
       }
       const links = [
         '<link rel="apple-touch-icon" href="' + path + '/apple-touch-icon.png" />',

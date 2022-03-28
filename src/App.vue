@@ -6,7 +6,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "Elucidator blog starter for vue and vite",
+      content: "Blog y web personal de Manu Rúa",
     },
   ],
 })

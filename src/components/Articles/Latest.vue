@@ -23,12 +23,12 @@ const props = defineProps<{
       loading="lazy"
     />
     <div class="mt-5 flex flex-col lg:px-5 lg:pt-5 lg:mt-0">
-      <span class="mb-2 sm:mt-5 lg:mt-0 text-elucidator-700 dark:text-elucidator-50"
+      <span class="mb-2 sm:mt-5 lg:mt-0 text-base-700 dark:text-base-50"
         >Published at {{ $props.date }}</span
       >
       <router-link
         :to="to"
-        class="text-3xl text-elucidator-800 dark:text-dark-repulser-400 font-bold mb-2"
+        class="text-3xl text-base-800 dark:text-base-400 font-bold mb-2"
       >
         {{ $props.title }}
       </router-link>

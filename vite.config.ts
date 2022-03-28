@@ -10,6 +10,7 @@ import IconsResolver from "unplugin-icons/resolver"
 import AutoImport from "unplugin-auto-import/vite"
 import PurgeIcons from "vite-plugin-purge-icons"
 import { VitePWA } from "vite-plugin-pwa"
+import SVGLoader from 'vite-svg-loader'
 import Prism from "markdown-it-prism"
 import anchor from "markdown-it-anchor"
 // @ts-expect-error
@@ -35,6 +36,11 @@ export default defineConfig({
     "process.env": process.env,
   },
   plugins: [
+    SVGLoader({
+      svgoConfig: {
+        multipass: true
+      }
+    }),
     Vue({
       include: [/\.vue$/, /\.md$/],
     }),

@@ -17,19 +17,19 @@ const articles = computed(() => {
 
 <template>
   <div class="inline-grid px-4 lg:px-0">
-    <h3 class="mt-10vh text-xl text-elucidator-700 dark:text-dark-repulser-400 font-bold uppercase tracking-widest opacity-50">
+    <h3 class="mt-10vh text-xl text-base-700 dark:text-base-50 font-bold uppercase tracking-widest opacity-50">
       hey! soy Manu Rúa
     </h3>
-    <h1 class="mt-9 mb-10vh leading-tight text-5xl <sm:text-4xl text-elucidator-900 dark:text-dark-repulser-400 font-normal max-w-4xl">
-      <span class="font-bold underline underline-underline-yellow underline-2 underline-offset-4">Ingeniero</span> <span class="font-bold underline underline-underline-yellow underline-2 underline-offset-4">software</span> y <span class="font-bold underline underline-underline-blue underline-2 underline-offset-4">creador</span> <span class="font-bold underline underline-underline-blue underline-2 underline-offset-4">digital</span> en remoto desde <span class="font-bold underline underline-underline-red underline-2 underline-offset-4">Sevilla</span> 💃🏻
+    <h1 class="mt-9 mb-10vh leading-tight text-5xl <sm:text-4xl text-base-900 dark:text-base-50 font-normal max-w-4xl">
+      <span class="font-bold underline underline-secondary-yellow-5 underline-2 underline-offset-4">Ingeniero</span> <span class="font-bold underline underline-secondary-yellow-5 underline-2 underline-offset-4">software</span> y <span class="font-bold underline underline-primary-blue-4 underline-2 underline-offset-4">creador</span> <span class="font-bold underline underline-primary-blue-4 underline-2 underline-offset-4">digital</span> en remoto desde <span class="font-bold underline underline-secondary-red-5 underline-2 underline-offset-4">Sevilla</span> 💃🏻
     </h1>
   </div>
   <div class="flex flex-col flex-wrap mb-2 mt-12 px-4 lg:px-0">
     <div class="flex justify-between mb-5">
-      <h2 class="py-0.5 px-2 bg-gray-200 rounded-lg text-2xl self-center font-bold text-elucidator-900 dark:text-dark-repulser-400">b-log</h2>
+      <h2 class="py-0.5 px-2 bg-gray-200 dark:bg-gray-500 rounded-lg text-2xl self-center font-bold text-base-900 dark:text-base-50">b-log</h2>
       <router-link
         to="/articles"
-        class="cursor-pointer text-right text-base my-auto py-2 px-5 bg-blue-500 rounded-full text-white dark:text-dark-repulser-400"
+        class="shadow-md cursor-pointer text-right text-base my-auto py-2 px-5 bg-primary-blue-4 rounded-full text-base-50"
         >ver todos</router-link
       >
     </div>
@@ -43,6 +43,7 @@ const articles = computed(() => {
         :alt="`blog-banner-${slug(data.meta.frontmatter.name)}`"
         :tags="data.meta.frontmatter.tags"
         :date="`${new Date(data.meta.frontmatter.date).toLocaleDateString('es-ES', dateOptions)}`"
+        :time="data.meta.frontmatter.time"
         :title="data.meta.frontmatter.name"
         :to="data.path"
         :to-tags="`/tags/${data.meta.frontmatter.tags}`"

@@ -32,7 +32,7 @@ const clickEndPage = () => {
 
 <template>
   <div class="flex flex-col flex-wrap mb-2 px-4 lg:px-0">
-    <h1 class="text-3xl text-elucidator-700 dark:text-dark-repulser-400 font-bold">
+    <h1 class="text-3xl text-base-700 dark:text-base-400 font-bold">
       Artículos con tag {{ paramsTag }} ({{ tags.length }})
     </h1>
     <div class="flex flex-col flex-wrap mb-2">

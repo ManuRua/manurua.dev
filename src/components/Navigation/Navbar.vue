@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { isDark, toggleDark, slug } from "~/utils"
 import type { NavbarMenu } from "~/types"
+import LogoSVG from "/public/logo.svg?component";
 
 // https://vueuse.org/shared/useToggle/
 const [search, setSearch] = useToggle()
@@ -61,46 +62,41 @@ const dataNavbar: NavbarMenu[] = [
 
 <template>
   <nav
-    class="z-10 text-elucidator-700 dark:text-dark-repulser-400 relative h-20 px-4"
+    class="z-10 text-base-700 dark:text-base-400 relative h-20 px-4"
     role="navigation"
     aria-label="navbar"
   >
     <div class="max-w-screen-lg mx-auto h-full flex flex-row items-center space-x-4">
       <div class="logo flex-1">
         <router-link to="/" class="font-bold lg:tracking-wide text-2xl">
-          <img
-            src="/images/rua.svg"
-            alt="Logo Rúa"
-            class="w-16"
-            loading="lazy"
-          />
+          <LogoSVG class="w-16 fill-dark dark:fill-base-50" loading="lazy"/>
         </router-link>
       </div>
-      <div class="flex flex-wrap items-center">
+      <div class="flex flex-wrap items-center justify-center">
         <router-link
           v-for="(data, i) in dataNavbar"
           :key="i"
-          class="mr-5 py-0.5 px-2 rounded-lg text-elucidator-700 dark:text-dark-repulser-400 dark:hover:text-elucidator-300 hover:text-gray-900 hidden lg:block"
+          class="mr-5 py-0.5 px-2 rounded-lg text-base-700 dark:text-base-200 dark:hover:text-base-50 hover:text-gray-900 hidden lg:block"
           :to="data.to"
-          active-class="bg-gray-200 dark:bg-gray-500 dark:text-dark-repulser-200"
+          active-class="bg-gray-200 dark:bg-gray-500 dark:text-base-200"
           >{{ data.name }}</router-link
         >
         <carbon-sun
           v-if="isDark"
-          class="mr-5 cursor-pointer text-elucidator-700 dark:text-dark-repulser-400"
+          class="mr-5 cursor-pointer text-base-700 dark:text-base-200"
           tabindex="0"
           @click="toggleDark"
           title="Toggle light mode"
         />
         <carbon-moon
           v-else
-          class="mr-5 cursor-pointer text-elucidator-700 dark:text-dark-repulser-400"
+          class="mr-5 cursor-pointer text-base-700 dark:text-base-200"
           tabindex="0"
           @click="toggleDark"
           title="Toggle dark mode"
         />
         <carbon-search
-          class="mr-5 cursor-pointer text-elucidator-700 dark:text-dark-repulser-400"
+          class="mr-5 cursor-pointer text-base-700 dark:text-base-200"
           tabindex="0"
           @click="setSearch"
           title="Search articles.."
@@ -111,10 +107,10 @@ const dataNavbar: NavbarMenu[] = [
           rel="noreferrer"
           title="repository github"
         >
-          <uil-github class="flex cursor-pointer text-elucidator-700 dark:text-dark-repulser-400" />
+          <uil-github class="flex cursor-pointer text-base-700 dark:text-base-200" />
         </a>
         <carbon-menu
-          class="cursor-pointer text-elucidator-700 dark:text-dark-repulser-400 ml-5 sm:block lg:hidden"
+          class="cursor-pointer text-base-700 dark:text-base-200 ml-5 sm:block lg:hidden"
           tabindex="0"
           @click="setOpen"
         />
@@ -126,25 +122,25 @@ const dataNavbar: NavbarMenu[] = [
   <nav
     v-if="open"
     ref="navbottom"
-    class="py-4 px-8 bg-elucidator-100 dark:bg-elucidator-600 fixed bottom-0 z-99 inset-x-0 rounded-t-lg shadow-lg overflow-x-hidden overflow-y-hidden lg:hidden"
+    class="py-4 px-8 bg-base-100 dark:bg-base-600 fixed bottom-0 z-99 inset-x-0 rounded-t-lg shadow-lg overflow-x-hidden overflow-y-hidden lg:hidden"
     :class="open ? 'block translate-y-0' : 'hidden translate-y-full'"
   >
     <ul class="flex flex-col">
-      <router-link to="/" class="bg-elucidator-50 dark:bg-elucidator-500 p-2 mb-2 rounded-md">
-        <li class="flex flex-row flex-wrap items-center dark:text-elucidator-100">
+      <router-link to="/" class="bg-base-50 dark:bg-base-500 p-2 mb-2 rounded-md">
+        <li class="flex flex-row flex-wrap items-center dark:text-base-100">
           <carbon-home class="mr-2" />inicio
         </li>
       </router-link>
       <router-link
         to="/articles"
-        class="bg-elucidator-50 dark:bg-elucidator-500 p-2 mb-2 rounded-md"
+        class="bg-base-50 dark:bg-base-500 p-2 mb-2 rounded-md"
       >
-        <li class="flex flex-row flex-wrap items-center dark:text-elucidator-100">
+        <li class="flex flex-row flex-wrap items-center dark:text-base-100">
           <carbon-table-of-contents class="mr-2" />b-log
         </li>
       </router-link>
-      <router-link to="/about" class="bg-elucidator-50 dark:bg-elucidator-500 p-2 mb-2 rounded-md">
-        <li class="flex flex-row flex-wrap items-center dark:text-elucidator-100">
+      <router-link to="/about" class="bg-base-50 dark:bg-base-500 p-2 mb-2 rounded-md">
+        <li class="flex flex-row flex-wrap items-center dark:text-base-100">
           <uil-document-layout-center class="mr-2" />sobre mí
         </li>
       </router-link>
@@ -179,6 +175,6 @@ const dataNavbar: NavbarMenu[] = [
 
 <style lang="scss">
 .active-class {
-  @apply p-2 mb-2 rounded-md bg-elucidator-200 dark:bg-elucidator-700;
+  @apply p-2 mb-2 rounded-md bg-base-200 dark:bg-base-700;
 }
 </style>

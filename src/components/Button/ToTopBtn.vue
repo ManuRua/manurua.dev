@@ -12,7 +12,7 @@ const toTop = () => {
 <template>
   <div class="fixed right-5 bottom-5 z-1">
     <button
-      :class="`bg-dark-repulser-400 p-4 shadow rounded-1/2 ${
+      :class="`bg-base-400 p-4 shadow rounded-1/2 ${
         y < 350 ? 'hidden' : 'block'
       } hover:shadow-lg`"
       @click="toTop"

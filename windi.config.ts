@@ -12,7 +12,7 @@ export default defineConfig({
     },
     extend: {
       colors: {
-        elucidator: {
+        base: {
           "50": "#f6f7f9",
           "100": "#edeff2",
           "200": "#e1e4ea",
@@ -24,22 +24,26 @@ export default defineConfig({
           "800": "#3f475a",
           "900": "#313745",
         },
-        "dark-repulser": {
-          "50": "#f1f9f8",
-          "100": "#f1f9f8",
-          "200": "#cceae7",
-          "300": "#9ad6cf",
-          "400": "#63bfb5",
-          "500": "#419f94",
-          "600": "#347f76",
-          "700": "#28625b",
-          "800": "#21504a",
-          "900": "#1f4c47",
+        "primary-blue": {
+          1: "#CAF3F9",
+          2: "#93E0EB",
+          3: "#66CBD9",
+          4: "#42B3C2",
+          5: "#2396A6"
         },
-        underline: {
-          "yellow": "#FFD27D",
-          "blue": "#5DE1F1",
-          "red": "#C6001F",
+        "secondary-yellow": {
+          1: "#FFEFCE",
+          2: "#FFE09D",
+          3: "#FFD375",
+          4: "#FFC953",
+          5: "#FFBE33"
+        },
+        "secondary-red": {
+          1: "#FFD2CE",
+          2: "#FFA49D",
+          3: "#FF7F75",
+          4: "#FF6053",
+          5: "#FF4133"
         }
       },
     },
