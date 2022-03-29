@@ -37,7 +37,7 @@ export const latestArticle = () => {
 export const getArticlesTags = (tags: Array<string>) => {
   const isPosts = getDataRoutes().filter((data) => Object.keys(data.meta).length !== 0)
   const filter = isPosts.filter((tag: any) =>
-    tags.every((filter) => tag.meta.frontmatter.tags.includes(filter)),
+    tags.every((filter) => tag.meta.frontmatter.metatags.includes(filter)),
   )
   return filter
 }
@@ -58,7 +58,7 @@ export const getRelatedArticles = ({ limit, tags, name }: RelatedArticles) => {
     .filter((data: any) => data.meta.frontmatter.name !== name)
     .slice(0, limit)
   const filter = isPosts.filter((tag: any) =>
-    tags.some((filter) => tag.meta.frontmatter.tags.includes(filter)),
+    tags.some((filter) => tag.meta.frontmatter.metatags.includes(filter)),
   )
   return filter
 }

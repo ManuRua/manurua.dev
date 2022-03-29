@@ -4,6 +4,7 @@ thumbnail: /images/deno/deno_cover.jpeg
 date: 2020-05-17
 time: 5
 tags: ["Deno", "NodeJS", "TypeScript", "Rust", "Intro"]
+metatags: ["deno", "nodejs", "typescript", "rust", "intro"]
 ---
 
 <h1>Tabla de Contenidos</h1>
