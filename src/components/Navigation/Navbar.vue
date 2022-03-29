@@ -76,7 +76,7 @@ const dataNavbar: NavbarMenu[] = [
         <router-link
           v-for="(data, i) in dataNavbar"
           :key="i"
-          class="mr-5 py-0.5 px-2 rounded-lg text-base-700 dark:text-base-200 dark:hover:text-base-50 hover:text-gray-900 hidden lg:block"
+          class="mono mr-5 py-0.5 px-2 rounded-lg text-base-700 dark:text-base-200 dark:hover:text-base-50 hover:text-gray-900 hidden lg:block"
           :to="data.to"
           active-class="bg-gray-200 dark:bg-gray-500 dark:text-base-200"
           >{{ data.name }}</router-link
@@ -106,8 +106,9 @@ const dataNavbar: NavbarMenu[] = [
           target="_blank"
           rel="noreferrer"
           title="repository github"
+          class="flex"
         >
-          <uil-github class="flex cursor-pointer text-base-700 dark:text-base-200" />
+          <uil-github class="flex cursor-pointer text-base-700 dark:text-base-200" viewBox="0 1 23.5 23.5" />
         </a>
         <carbon-menu
           class="cursor-pointer text-base-700 dark:text-base-200 ml-5 sm:block lg:hidden"

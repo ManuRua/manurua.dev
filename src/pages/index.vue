@@ -29,7 +29,7 @@ const articles = computed(() => {
       <h2 class="py-0.5 px-2 bg-gray-200 dark:bg-gray-500 rounded-lg text-2xl self-center font-bold text-base-900 dark:text-base-50">b-log</h2>
       <router-link
         to="/articles"
-        class="shadow-md cursor-pointer text-right text-base my-auto py-2 px-5 bg-primary-blue-4 rounded-full text-base-50"
+        class="mono shadow-md cursor-pointer text-right text-base my-auto py-2 px-5 bg-primary-blue-4 rounded-full text-base-50"
         >ver todos</router-link
       >
     </div>

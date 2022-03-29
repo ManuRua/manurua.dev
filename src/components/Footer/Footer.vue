@@ -7,3 +7,9 @@
     <p class="text-center">Hosted on Netlify.</p>
   </footer>
 </template>
+
+<style lang="scss">
+footer > p {
+  font-family: "Space Mono", sans-serif;
+}
+</style>

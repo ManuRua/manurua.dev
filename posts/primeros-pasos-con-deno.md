@@ -70,11 +70,11 @@ Probamos a ejecutar el script: `$ deno run fsPermissionDenied.ts` y recibimos 
 
 Como vemos Deno ya nos indica mediante flags el modo para tener acceso a estos recursos:
 
-- `—-allow-read` para lectura.
-- `—-allow-write` para lectura.
-- `—-allow-network` para tener acceso a la red.
-- `-allow-env` para el entorno.
-- `-allow-run` para el lanzamiento de subprocesos.
+- `--allow-read` para lectura.
+- `--allow-write` para lectura.
+- `--allow-network` para tener acceso a la red.
+- `--allow-env` para el entorno.
+- `--allow-run` para el lanzamiento de subprocesos.
 
 ## **🧱 Módulos**
 
