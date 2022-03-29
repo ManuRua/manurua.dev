@@ -33,7 +33,7 @@ const clickEndPage = () => {
 <template>
   <div class="flex flex-col flex-wrap mb-2 px-4 lg:px-0">
     <h1 class="text-3xl text-base-700 dark:text-base-400 font-bold">
-      Búsqueda: {{ searchParams }} ({{ getArticlesSearch([unslug(searchParams)]).length }})
+      Búsqueda: {{ unslug(searchParams) }} ({{ getArticlesSearch([unslug(searchParams)]).length }})
     </h1>
     <div class="flex flex-col flex-wrap mb-2">
       <div
@@ -46,8 +46,8 @@ const clickEndPage = () => {
           :alt="`blog-banner-${slug(data.meta.frontmatter.name)}`"
           :tags="data.meta.frontmatter.tags"
           :date="`${new Date(data.meta.frontmatter.date).toLocaleDateString('es-ES', dateOptions)}`"
+          :time="data.meta.frontmatter.time"
           :title="data.meta.frontmatter.name"
-          :description="limitString(data.meta.frontmatter.description, 100)"
           :to="data.path"
           :to-tags="`/tags/${data.meta.frontmatter.tags}`"
         />

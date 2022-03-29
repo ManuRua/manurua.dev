@@ -11,10 +11,6 @@ export const slug = (str: string): string =>
 
 export const unslug = (str: string): string => {
   const slug = str.split("-")
-  for (let i = 0; i < slug.length; i++) {
-    const word = slug[i]
-    slug[i] = word.charAt(0).toUpperCase() + word.slice(1)
-  }
   return slug.join(" ")
 }
 

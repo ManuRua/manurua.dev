@@ -46,7 +46,7 @@ export const getArticlesTags = (tags: Array<string>) => {
 export const getArticlesSearch = (tags: Array<string>) => {
   const isPosts = getDataRoutes().filter((data) => Object.keys(data.meta).length !== 0)
   const filter = isPosts.filter((tag: any) =>
-    tags.every((filter) => tag.meta.frontmatter.name.includes(filter)),
+    tags.every((filter) => tag.meta.frontmatter.name.toLowerCase().includes(filter)),
   )
   return filter
 }
