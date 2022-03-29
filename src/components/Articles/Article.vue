@@ -19,14 +19,14 @@ const props = defineProps<{
     >
       <div class="article-content-top flex-1">
         <div class="flex mt-2">
-          <carbon-calendar class="mr-1 text-xs" />
-          <span class="text-base-700 mb-1 text-xs dark:text-base-700 text-center">{{
+          <carbon-calendar class="mr-1 text-xs text-base-700" />
+          <span class="text-base-700 mb-1 text-xs text-center">{{
             $props.date
           }}</span>
          </div>
         <div class="flex mt-1">
-          <carbon-time class="mr-1 text-xs" />
-          <span class="text-base-700 mb-1 text-xs dark:text-base-700 text-center">{{
+          <carbon-time class="mr-1 text-xs text-base-700" />
+          <span class="text-base-700 mb-1 text-xs text-center">{{
             $props.time
           }} minutos de lectura</span>
         </div>

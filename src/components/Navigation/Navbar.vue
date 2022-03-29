@@ -107,7 +107,7 @@ const dataNavbar: NavbarMenu[] = [
           rel="noreferrer"
           title="repository github"
         >
-          <uil-github class="flex cursor-pointer text-base-700 dark:text-base-200" />
+          <uil-github class="flex cursor-pointer text-base-700 dark:text-base-200" viewBox="0 0 23 23" />
         </a>
         <carbon-menu
           class="cursor-pointer text-base-700 dark:text-base-200 ml-5 sm:block lg:hidden"
