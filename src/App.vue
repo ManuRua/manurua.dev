@@ -28,8 +28,16 @@ useHead({
       content: "website"
     },
     {
+      property: "og:locale",
+      content: "es_ES"
+    },
+    {
       property: "og:url",
       content: "https://manurua.dev/"
+    },
+    {
+      property: "og:site_name",
+      content: "Manu Rúa"
     },
     {
       property: "og:title",
@@ -42,6 +50,18 @@ useHead({
     {
       property: "og:image",
       content: "https://manurua.netlify.app/metaimage.png"
+    },
+    {
+      property: "og:image:secure_url",
+      content: "https://manurua.netlify.app/metaimage.png"
+    },
+    {
+      property: "og:image",
+      content: "https://manurua.netlify.app/metaimage.png"
+    },
+    {
+      property: "og:image:type",
+      content: "image/png"
     },
     {
       name: "twitter:card",
