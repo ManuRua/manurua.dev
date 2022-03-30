@@ -44,27 +44,31 @@ useHead({
       content: "https://manurua.netlify.app/metaimage.png"
     },
     {
-      property: "twitter:card",
+      name: "twitter:card",
       content: "summary_large_image"
     },
     {
-      property: "twitter:url",
+      name: "twitter:url",
       content: "https://manurua.dev/"
     },
     {
-      property: "twitter:title",
+      name: "twitter:title",
       content: "Manu Rúa | Desarrollo Backend con Golang, Web3, Gestión con Notion"
     },
     {
-      property: "twitter:description",
+      name: "twitter:description",
       content: "Ingeniero software y creador digital en remoto desde Sevilla 💃🏻\nHablo sobre tecnologías Backend, Web3, Notion... y lo que se me vaya ocurriendo."
     },
     {
-      property: "twitter:image",
+      name: "twitter:image",
       content: "https://manurua.netlify.app/metaimage.png"
     },
     {
-      property: "twitter:creator",
+      name: "twitter:creator",
+      content: "@manurua"
+    },
+    {
+      name: "twitter:site",
       content: "@manurua"
     },
   ],
