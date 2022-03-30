@@ -41,7 +41,7 @@ useHead({
     },
     {
       property: "og:image",
-      content: "https://manurua.dev/metaimage.png"
+      content: "https://manurua.netlify.app/metaimage.png"
     },
     {
       property: "twitter:card",
@@ -61,7 +61,7 @@ useHead({
     },
     {
       property: "twitter:image",
-      content: "https://manurua.dev/metaimage.png"
+      content: "https://manurua.netlify.app/metaimage.png"
     },
     {
       property: "twitter:creator",
