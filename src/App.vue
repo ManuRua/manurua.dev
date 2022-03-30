@@ -41,7 +41,7 @@ useHead({
     },
     {
       property: "og:image",
-      content: "https://manurua.dev/metaimage.svg"
+      content: "https://manurua.dev/metaimage.png"
     },
     {
       property: "twitter:card",
@@ -60,12 +60,8 @@ useHead({
       content: "Ingeniero software y creador digital en remoto desde Sevilla 💃🏻\nHablo sobre tecnologías Backend, Web3, Notion... y lo que se me vaya ocurriendo."
     },
     {
-      property: "twitter:image:src",
-      content: "https://manurua.dev/metaimage.svg"
-    },
-    {
       property: "twitter:image",
-      content: "<a href='https://manurua.dev/metaimage.svg'>https://manurua.dev/metaimage.svg</a>"
+      content: "https://manurua.dev/metaimage.png"
     },
     {
       property: "twitter:creator",
