@@ -1,11 +1,90 @@
 <script setup lang="ts">
 import { isClient } from "@vueuse/core"
 import { getRelatedArticles } from "~/data"
-import { slug, limitString } from "~/utils"
+import { slug, limitString, setCanonical } from "~/utils"
 import type { DataShare } from "~/types"
 
 const { frontmatter } = defineProps<{ frontmatter: any }>()
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
+
+const router = useRoute()
+const routes = router.fullPath
+let url: string = ""
+if (typeof window !== "undefined") {
+  url = window.location.origin + routes
+}
+
+useHead({
+  title: frontmatter.name,
+  meta: [
+    {
+      name: "title",
+      content: frontmatter.name,
+    },
+    {
+      property: "og:type",
+      content: "article"
+    },
+    {
+      property: "og:article:published_time",
+      content: frontmatter.date
+    },
+    {
+      property: "og:article:tag",
+      content: frontmatter.tags
+    },
+    {
+      property: "og:url",
+      content: url
+    },
+    {
+      property: "og:title",
+      content: frontmatter.name
+    },
+    {
+      property: "og:image",
+      content: "https://manurua.netlify.app" +  frontmatter.thumbnail
+    },
+    {
+      property: "og:image:secure_url",
+      content: "https://manurua.netlify.app" +  frontmatter.thumbnail
+    },
+    {
+      property: "og:image",
+      content: "https://manurua.netlify.app" +  frontmatter.thumbnail
+    },
+    {
+      property: "og:image:type",
+      content: "image/png"
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image"
+    },
+    {
+      name: "twitter:url",
+      content: url
+    },
+    {
+      name: "twitter:title",
+      content: frontmatter.name
+    },
+    {
+      name: "twitter:image",
+      content: "https://manurua.netlify.app" +  frontmatter.thumbnail
+    },
+    {
+      name: "twitter:creator",
+      content: "@manurua"
+    },
+    {
+      name: "twitter:site",
+      content: "@manurua"
+    },
+  ],
+})
+
+setCanonical()
 
 const relatedArticles = computed(() => {
   return getRelatedArticles({
@@ -15,12 +94,7 @@ const relatedArticles = computed(() => {
   })
 })
 
-const router = useRoute()
-const routes = router.fullPath
-let url: string = ""
-if (typeof window !== "undefined") {
-  url = window.location.origin + routes
-}
+
 const dataShare: DataShare[] = [
   {
     icon: "facebook",
@@ -28,8 +102,7 @@ const dataShare: DataShare[] = [
     name: "Facebook",
     url: url,
     title: frontmatter.name,
-    description: frontmatter.description,
-    hashtags: "test",
+    hashtags: frontmatter.tags[0],
   },
   {
     icon: "twitter",
@@ -37,14 +110,14 @@ const dataShare: DataShare[] = [
     name: "Twitter",
     url: url,
     title: frontmatter.name,
-    hashtags: "test",
+    hashtags: frontmatter.tags[0],
+    twitterUser: "@manurua"
   },
   {
     icon: "whatsapp",
     network: "whatsapp",
     name: "Whatsapp",
     url: url,
-    description: frontmatter.description,
     title: frontmatter.name,
   },
   {
@@ -52,7 +125,6 @@ const dataShare: DataShare[] = [
     network: "telegram",
     name: "Telegram",
     url: url,
-    description: frontmatter.description,
     title: frontmatter.name,
   },
 ]

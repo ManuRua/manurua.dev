@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { latestArticle, getArticles } from "~/data"
-import { limitString, slug } from "~/utils"
+import { limitString, slug, setCanonical } from "~/utils"
 
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
+
+setCanonical()
 
 // Get latest article
 // const latest = computed(() => {

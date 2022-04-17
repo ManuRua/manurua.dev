@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { getArticles, paginateData } from "~/data"
-import { slug, limitString } from "~/utils"
+import { slug, limitString, setCanonical } from "~/utils"
 
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
+
+setCanonical()
 
 // Get articles data
 const currentPage = ref<number>(1)

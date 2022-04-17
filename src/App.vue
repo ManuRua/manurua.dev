@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { setCanonical } from "~/utils"
+
 // In this section, we use @vueuse/head. Check this for more detail
 // https://github.com/vueuse/head
 useHead({
@@ -11,6 +13,10 @@ useHead({
     {
       name: "description",
       content: "Ingeniero software y creador digital en remoto desde Sevilla 💃🏻\nHablo sobre tecnologías Backend, Web3, Notion... y lo que se me vaya ocurriendo.",
+    },
+    {
+      name: "robots",
+      content: "follow, index",
     },
     {
       name: "theme-color",
@@ -49,15 +55,15 @@ useHead({
     },
     {
       property: "og:image",
-      content: "https://manurua.netlify.app/metaimage.png"
+      content: "https://manurua.netlify.app/metaimg.png"
     },
     {
       property: "og:image:secure_url",
-      content: "https://manurua.netlify.app/metaimage.png"
+      content: "https://manurua.netlify.app/metaimg.png"
     },
     {
       property: "og:image",
-      content: "https://manurua.netlify.app/metaimage.png"
+      content: "https://manurua.netlify.app/metaimg.png"
     },
     {
       property: "og:image:type",
@@ -81,7 +87,7 @@ useHead({
     },
     {
       name: "twitter:image",
-      content: "https://manurua.netlify.app/metaimage.png"
+      content: "https://manurua.netlify.app/metaimg.png"
     },
     {
       name: "twitter:creator",

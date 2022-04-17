@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { getArticlesTags, getParams, paginateData } from "~/data"
-import { slug, limitString } from "~/utils"
+import { slug, limitString, setCanonical} from "~/utils"
+
+setCanonical()
 
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 const paramsTag: any = getParams("tag")

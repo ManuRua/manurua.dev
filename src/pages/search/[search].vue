@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { getArticlesSearch, getParams, paginateData } from "~/data"
-import { unslug, slug, limitString } from "~/utils"
+import { unslug, slug, limitString, setCanonical } from "~/utils"
+
+setCanonical()
 
 const searchParams: any = getParams("search")
 const search = getArticlesSearch([unslug(searchParams)])
