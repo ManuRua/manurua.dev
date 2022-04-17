@@ -1,5 +1,6 @@
 ---
 name: Primeros pasos con Deno 🦕 El sucesor de NodeJS desarrollado con Rust y TypeScript
+description: Deno es el nuevo runtime multiplataforma para JavaScript y TypeScript desarrollado por Ryan Dahl, el creador de NodeJS. Basado en la V8 de Chrome, desarrollado en Rust y basado en TypeScript, llega para desterrar a éste de su reinado.
 thumbnail: /images/deno/deno_cover.jpeg
 date: 2020-05-17
 time: 5

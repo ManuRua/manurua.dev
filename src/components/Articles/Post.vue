@@ -22,6 +22,10 @@ useHead({
       content: frontmatter.name,
     },
     {
+      name: "description",
+      content: frontmatter.description,
+    },
+    {
       property: "og:type",
       content: "article"
     },
