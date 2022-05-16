@@ -96,20 +96,11 @@ const dataNavbar: NavbarMenu[] = [
           title="Toggle dark mode"
         />
         <carbon-search
-          class="mr-5 cursor-pointer text-base-700 dark:text-base-200"
+          class="cursor-pointer text-base-700 dark:text-base-200"
           tabindex="0"
           @click="setSearch"
           title="Search articles.."
         />
-        <a
-          href="https://github.com/ManuRua"
-          target="_blank"
-          rel="noreferrer"
-          title="repository github"
-          class="flex"
-        >
-          <uil-github class="flex cursor-pointer text-base-700 dark:text-base-200" viewBox="0 1 23.5 23.5" />
-        </a>
         <carbon-menu
           class="cursor-pointer text-base-700 dark:text-base-200 ml-5 sm:block lg:hidden"
           tabindex="0"

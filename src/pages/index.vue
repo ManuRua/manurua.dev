@@ -22,6 +22,44 @@ const articles = computed(() => {
     <h3 class="mt-10vh text-xl text-base-700 dark:text-base-50 font-bold uppercase tracking-widest opacity-50">
       hey! soy Manu Rúa
     </h3>
+    <div class="mt-2 flex">
+      <a
+        href="https://github.com/ManuRua"
+        target="_blank"
+        rel="noreferrer"
+        title="repository github"
+        class="flex mr-2"
+      >
+        <uil-github class="w-8 h-8 cursor-pointer text-base-700 dark:text-base-200 hover:text-gray-900 dark:hover:text-base-50" />
+      </a>
+      <a
+        href="https://twitter.com/manurua"
+        target="_blank"
+        rel="noreferrer"
+        title="twitter account"
+        class="flex mx-2"
+      >
+        <uil-twitter class="w-8 h-8 cursor-pointer text-base-700 dark:text-base-200 hover:text-gray-900 dark:hover:text-base-50" viewBox="1 0 22 22" />
+      </a>
+      <a
+        href="https://www.instagram.com/manurua.dev/"
+        target="_blank"
+        rel="noreferrer"
+        title="instagram account"
+        class="flex mx-2"
+      >
+        <uil-instagram class="w-8 h-8 cursor-pointer text-base-700 dark:text-base-200 hover:text-gray-900 dark:hover:text-base-50" viewBox="0 0 22 22" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/manuelrua/"
+        target="_blank"
+        rel="noreferrer"
+        title="linkedin account"
+        class="flex mx-2"
+      >
+        <uil-linkedin class="w-8 h-8 cursor-pointer text-base-700 dark:text-base-200 hover:text-gray-900 dark:hover:text-base-50" viewBox="0 0 22 22" />
+      </a>
+    </div>
     <h1 class="mt-9 mb-10vh leading-tight text-5xl <sm:text-4xl text-base-900 dark:text-base-50 font-normal max-w-4xl">
       <span class="font-bold underline underline-secondary-yellow-5 underline-2 underline-offset-4">Ingeniero</span> <span class="font-bold underline underline-secondary-yellow-5 underline-2 underline-offset-4">software</span> y <span class="font-bold underline underline-primary-blue-4 underline-2 underline-offset-4">creador</span> <span class="font-bold underline underline-primary-blue-4 underline-2 underline-offset-4">digital</span> en remoto desde <span class="font-bold underline underline-secondary-red-5 underline-2 underline-offset-4">Sevilla</span> 💃🏻
     </h1>
