@@ -7,8 +7,7 @@ const props = defineProps<{
 </script>
 <template>
   <YouTube
-    :src="$props.src"
-    ref="youtube"
+    :src="src"
     width="100%"
     height="100%"
     class="m-auto <md:w-auto <sm:h-xs w-2xl h-sm my-10"
