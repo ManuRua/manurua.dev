@@ -53,16 +53,16 @@ const dataNavbar: NavbarMenu[] = [
     name: "b-log",
     to: "/articles",
   },
-  {
-    name: "sobre mí",
-    to: "/about",
-  },
+  // {
+  //   name: "sobre mí",
+  //   to: "/about",
+  // },
 ]
 </script>
 
 <template>
   <nav
-    class="z-10 text-base-700 dark:text-base-400 relative h-20 px-4"
+    class="z-10 text-base-700 dark:text-base-400 relative h-20 px-4 animate-fade-in-down animate-duration-1000"
     role="navigation"
     aria-label="navbar"
   >

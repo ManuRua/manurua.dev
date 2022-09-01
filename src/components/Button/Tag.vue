@@ -9,7 +9,7 @@ const props = defineProps<{
 <template>
   <div>
     <router-link
-      v-for="(data, i) in $props.tags"
+      v-for="(data, i) in tags"
       :key="i"
       :to="`/tags/${data.toLowerCase()}`"
       class="text-base-700 p-1 text-xs bg-gray-100 dark:bg-gray-200 rounded-full m-1 mr-2 ml-0"

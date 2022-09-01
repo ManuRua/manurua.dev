@@ -5,6 +5,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     Article: typeof import('./src/components/Articles/Article.vue')['default']
+    Blob: typeof import('./src/components/Effects/Blob.vue')['default']
     CarbonBackToTop: typeof import('~icons/carbon/back-to-top')['default']
     CarbonCalendar: typeof import('~icons/carbon/calendar')['default']
     CarbonHome: typeof import('~icons/carbon/home')['default']
@@ -14,22 +15,26 @@ declare module 'vue' {
     CarbonSun: typeof import('~icons/carbon/sun')['default']
     CarbonTableOfContents: typeof import('~icons/carbon/table-of-contents')['default']
     CarbonTime: typeof import('~icons/carbon/time')['default']
-    CarbonWarningAltFilled: typeof import('~icons/carbon/warning-alt-filled')['default']
+    CarbonWarningAltFilled: typeof import("~icons/carbon/warning-alt-filled")["default"]
     Footer: typeof import('./src/components/Footer/Footer.vue')['default']
-    ImageThree: typeof import('./src/components/Image/ImageThree.vue')['default']
-    ImageTwo: typeof import('./src/components/Image/ImageTwo.vue')['default']
     Latest: typeof import('./src/components/Articles/Latest.vue')['default']
     Navbar: typeof import('./src/components/Navigation/Navbar.vue')['default']
     Paginate: typeof import('./src/components/Pagination/Paginate.vue')['default']
     Post: typeof import('./src/components/Articles/Post.vue')['default']
+    SectionTitle: typeof import('./src/components/Sections/SectionTitle.vue')['default']
+    Separator: typeof import('./src/components/Articles/Separator.vue')['default']
     Share: typeof import('./src/components/Button/Share.vue')['default']
+    SocialLinks: typeof import('./src/components/Sections/SocialLinks.vue')['default']
     Tag: typeof import('./src/components/Button/Tag.vue')['default']
+    Techies: typeof import('./src/components/Sections/Techies.vue')['default']
+    Title: typeof import("./src/components/Sections/Title.vue")["default"]
     ToTopBtn: typeof import('./src/components/Button/ToTopBtn.vue')['default']
     UilDocumentLayoutCenter: typeof import('~icons/uil/document-layout-center')['default']
     UilGithub: typeof import('~icons/uil/github')['default']
     UilInstagram: typeof import('~icons/uil/instagram')['default']
     UilLinkedin: typeof import('~icons/uil/linkedin')['default']
     UilTwitter: typeof import('~icons/uil/twitter')['default']
+    YouTube: typeof import('./src/components/Articles/YouTube.vue')['default']
   }
 }
 

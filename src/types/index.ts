@@ -1,4 +1,5 @@
 import type { ViteSSGContext } from "vite-ssg"
+import { FunctionalComponent, SVGAttributes } from "vue"
 
 export type UserModule = (ctx: ViteSSGContext) => void
 
@@ -20,6 +21,12 @@ export interface DataShare {
 export interface NavbarMenu {
   name: string
   to: string
+}
+
+export interface TechiesList {
+  name: string
+  light: FunctionalComponent<SVGAttributes>
+  dark?: FunctionalComponent<SVGAttributes>
 }
 
 export interface RelatedArticles {

@@ -29,22 +29,25 @@ export default defineConfig({
           2: "#93E0EB",
           3: "#66CBD9",
           4: "#42B3C2",
-          5: "#2396A6"
+          5: "#2396A6",
         },
         "secondary-yellow": {
           1: "#FFEFCE",
           2: "#FFE09D",
           3: "#FFD375",
           4: "#FFC953",
-          5: "#FFBE33"
+          5: "#FFBE33",
         },
         "secondary-red": {
           1: "#FFD2CE",
           2: "#FFA49D",
           3: "#FF7F75",
           4: "#FF6053",
-          5: "#FF4133"
-        }
+          5: "#FF4133",
+        },
+      },
+      animation: {
+        "fade-swing": "fadeInLeft 500ms ease 2000ms, swing 500ms ease-in 2300ms",
       },
     },
   },

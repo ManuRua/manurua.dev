@@ -5,7 +5,7 @@ import { slug, limitString, setCanonical } from "~/utils"
 import type { DataShare } from "~/types"
 
 const { frontmatter } = defineProps<{ frontmatter: any }>()
-const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
+const dateOptions = { year: "numeric", month: "long", day: "numeric" }
 
 const router = useRoute()
 const routes = router.fullPath
@@ -27,63 +27,63 @@ useHead({
     },
     {
       property: "og:type",
-      content: "article"
+      content: "article",
     },
     {
       property: "og:article:published_time",
-      content: frontmatter.date
+      content: frontmatter.date,
     },
     {
       property: "og:article:tag",
-      content: frontmatter.tags
+      content: frontmatter.tags,
     },
     {
       property: "og:url",
-      content: url
+      content: url,
     },
     {
       property: "og:title",
-      content: frontmatter.name
+      content: frontmatter.name,
     },
     {
       property: "og:image",
-      content: "https://manurua.netlify.app" +  frontmatter.thumbnail
+      content: "https://manurua.netlify.app" + frontmatter.thumbnail,
     },
     {
       property: "og:image:secure_url",
-      content: "https://manurua.netlify.app" +  frontmatter.thumbnail
+      content: "https://manurua.netlify.app" + frontmatter.thumbnail,
     },
     {
       property: "og:image",
-      content: "https://manurua.netlify.app" +  frontmatter.thumbnail
+      content: "https://manurua.netlify.app" + frontmatter.thumbnail,
     },
     {
       property: "og:image:type",
-      content: "image/png"
+      content: "image/png",
     },
     {
       name: "twitter:card",
-      content: "summary_large_image"
+      content: "summary_large_image",
     },
     {
       name: "twitter:url",
-      content: url
+      content: url,
     },
     {
       name: "twitter:title",
-      content: frontmatter.name
+      content: frontmatter.name,
     },
     {
       name: "twitter:image",
-      content: "https://manurua.netlify.app" +  frontmatter.thumbnail
+      content: "https://manurua.netlify.app" + frontmatter.thumbnail,
     },
     {
       name: "twitter:creator",
-      content: "@manurua"
+      content: "@manurua",
     },
     {
       name: "twitter:site",
-      content: "@manurua"
+      content: "@manurua",
     },
   ],
 })
@@ -97,7 +97,6 @@ const relatedArticles = computed(() => {
     name: frontmatter.name,
   })
 })
-
 
 const dataShare: DataShare[] = [
   {
@@ -115,7 +114,7 @@ const dataShare: DataShare[] = [
     url: url,
     title: frontmatter.name,
     hashtags: frontmatter.tags[0],
-    twitterUser: "@manurua"
+    twitterUser: "@manurua",
   },
   {
     icon: "whatsapp",
@@ -175,9 +174,7 @@ if (isClient) {
           {{ new Date(frontmatter.date).toLocaleDateString("es-ES", dateOptions) }}
         </p>
       </div>
-      <p class="text-center text-dark-100 font-light mb-5 mx-4 dark:text-base-50 <sm:hidden">
-         · 
-      </p>
+      <p class="text-center text-dark-100 font-light mb-5 mx-4 dark:text-base-50 <sm:hidden">·</p>
       <div class="flex">
         <carbon-time class="mr-1 mt-2px dark:text-base-50" />
         <p class="text-center text-dark-100 font-light mb-5 dark:text-base-50">
@@ -186,24 +183,27 @@ if (isClient) {
       </div>
     </div>
     <Tag :tags="frontmatter.tags" class="mb-5 flex flex-row justify-left flex-wrap" />
-    <img
-      :src="frontmatter.thumbnail"
-      :alt="`thumbnail-${frontmatter.name}`"
-      class="w-full h-md object-cover rounded-md shadow-lg"
-      loading="lazy"
-    />
+    <figure>
+      <img
+        :src="frontmatter.thumbnail"
+        :alt="`thumbnail-${frontmatter.name}`"
+        class="w-full h-md object-cover rounded-md shadow-lg"
+        loading="lazy"
+      />
+      <figcaption class="text-xs text-center text-dark-100 font-light mt-1 dark:text-base-50">
+        Fuente: <a :href="frontmatter.thbn_src">{{ frontmatter.thbn_src }}fsdf</a>
+      </figcaption>
+    </figure>
     <div
       class="mt-5 mb-5 text-base-500 divide-y dark:text-base-50"
       style="border-bottom: 1px solid #63c0b6"
     >
       <slot />
     </div>
-    <h2
-      class="text-center text-3xl font-bold text-base-700 dark:text-base-400 mt-5 mb-4"
-    >
+    <h2 class="text-center text-3xl font-bold text-base-700 dark:text-base-400 mt-5 mb-4">
       Compártelo a tu gente
     </h2>
-    <div class="flex flex-wrap justify-center items-center">
+    <div class="flex flex-wrap justify-center items-center mb-5">
       <Share
         v-for="(share, i) in dataShare"
         :key="i"
@@ -219,12 +219,12 @@ if (isClient) {
         :media="share.media"
       />
     </div>
-    <div class="mt-5 mb-5">
+    <!-- <div class="mt-5 mb-5">
       <client-only>
         <Disqus />
       </client-only>
-    </div>
-    <div class="flex flex-wrap flex-col px-4 lg:px-0">
+    </div> -->
+    <div class="flex flex-wrap flex-col px-4 lg:px-0 mt-5">
       <h1 class="mb-5 mt-8 text-3xl text-base-700 dark:text-base-400 font-bold">
         Artículos Relacionados
       </h1>

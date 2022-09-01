@@ -12,11 +12,15 @@ import PurgeIcons from "vite-plugin-purge-icons"
 import { VitePWA } from "vite-plugin-pwa"
 import SVGLoader from 'vite-svg-loader'
 import Prism from "markdown-it-prism"
-import anchor from "markdown-it-anchor"
+import Anchor from "markdown-it-anchor"
 // @ts-expect-error
-import toc from "markdown-it-table-of-contents"
+import Toc from "markdown-it-table-of-contents"
 // @ts-expect-error
-import attr from "markdown-it-link-attributes"
+import LinkAttrs from "markdown-it-link-attributes"
+// @ts-expect-error
+import ItAttrs from "markdown-it-attrs"
+// @ts-expect-error
+import LazyLoading from "markdown-it-image-lazy-loading"
 import { resolve } from "path"
 import { readFileSync } from "fs"
 
@@ -38,8 +42,8 @@ export default defineConfig({
   plugins: [
     SVGLoader({
       svgoConfig: {
-        multipass: true
-      }
+        multipass: true,
+      },
     }),
     Vue({
       include: [/\.vue$/, /\.md$/],
@@ -53,24 +57,27 @@ export default defineConfig({
         html: true,
         linkify: true,
         typographer: true,
+        breaks: true,
       },
       wrapperClasses: "article-body mb-5",
       markdownItSetup(md) {
-        md.use(Prism)
-        md.use(anchor, {
-          permalink: true,
-          permalinkBefore: true,
-          permalinkSymbol: "#",
-          permalinkAttrs: () => ({ "aria-hidden": true }),
-        }),
-          md.use(attr, {
+        md.use(Prism),
+          md.use(ItAttrs),
+          md.use(Anchor, {
+            permalink: true,
+            permalinkBefore: true,
+            permalinkSymbol: "#",
+            permalinkAttrs: () => ({ "aria-hidden": true }),
+          }),
+          md.use(LinkAttrs, {
             pattern: /^https?:/,
             attrs: {
               target: "_blank",
               rel: "noopener",
             },
           }),
-          md.use(toc)
+          md.use(Toc),
+          md.use(LazyLoading)
       },
     }),
 

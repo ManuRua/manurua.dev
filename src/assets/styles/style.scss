@@ -9,6 +9,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Fira Sans", sans-serif;
+  --scale-rate: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html.dark {
@@ -28,4 +31,19 @@ h1, h2, h3, h4, h5 {
 
 .mono {
   font-family: "Space Mono", sans-serif;
+}
+
+.unblur {
+  animation-name: unblur;
+  animation-duration: 0.5s;
+}
+
+@keyframes unblur {
+  from {
+    filter: blur(6px);
+  }
+
+  to {
+    filter: blur(0);
+  }
 }

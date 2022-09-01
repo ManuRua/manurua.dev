@@ -31,6 +31,7 @@
     "vue-disqus": "^5.1.0",
     "vue-router": "^4.0.14",
     "vue-social-sharing": "^4.0.0-alpha4",
+    "vue3-youtube": "^0.1.9",
     "workbox-window": "^6.5.2"
   },
   "devDependencies": {
@@ -48,9 +49,11 @@
     "lint-staged": "^12.3.7",
     "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^8.4.1",
+    "markdown-it-attrs": "^4.1.4",
+    "markdown-it-image-lazy-loading": "^1.2.0",
     "markdown-it-link-attributes": "^3.0.0",
     "markdown-it-prism": "^2.2.3",
-    "markdown-it-table-of-contents": "^0.5.2",
+    "markdown-it-table-of-contents": "0.6.0",
     "node-sass": "^6.0.1",
     "prettier": "^2.6.1",
     "prismjs": "^1.27.0",
@@ -69,6 +72,7 @@
     "vite-ssg": "^0.11.4",
     "vite-svg-loader": "^3.1.2",
     "vue-tsc": "^0.0.24",
+    "webpack": "^5.0.0",
     "windicss": "^3.5.1"
   }
 }
