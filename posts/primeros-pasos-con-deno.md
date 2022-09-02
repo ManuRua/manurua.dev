@@ -27,13 +27,13 @@ Si bien sigue la misma arquitectura que NodeJS, es decir, event driven, asincron
 - Cuenta con **utilidades** integradas como un inspector de dependencias `deno info`, un formateador de código `deno fmt`, suite de testing y linter.
 - Tiene un conjunto de **[módulos estándar](https://deno.land/std)** previamente auditados los cuales están garantizados para trabajar con Deno.
 
-> Los elementos que componen Deno nos dejan ver, a priori, seguridad y rendimiento como principal motivación.
+> Los elementos que componen Deno nos dejan ver, a priori, seguridad y rendimiento como principal motivación.
 
 <Separator/>
 
 # 🔌 Instalación {#instalacion}
 
-Podemos instalar Deno de forma muy sencilla mediante [cargo](https://doc.rust-lang.org/cargo/), [homebrew](https://formulae.brew.sh/formula/deno) o [scoop](https://scoop.sh/) pero vamos a usar curl en este ejemplo:
+Podemos instalar Deno de forma muy sencilla mediante [cargo](https://doc.rust-lang.org/cargo/), [homebrew](https://formulae.brew.sh/formula/deno) o [scoop](https://scoop.sh/) pero vamos a usar curl en este ejemplo:
 
 `$ curl -fsSL https://deno.land/x/install/install.sh | sh`
 
@@ -41,7 +41,7 @@ Podemos comprobar nuestra instalación ejecutando el script de bienvenida:
 
 `$ deno run https://deno.land/std/examples/welcome.ts`
 
-👋🏻 Si todo está bien, nos debe devolver un amigable saludo por consola.Vamos a probar más ejemplos a medida que vemos todas sus virtudes.
+👋🏻 Si todo está bien, nos debe devolver un amigable saludo por consola. Vamos a probar más ejemplos a medida que vemos todas sus virtudes.
 
 <Separator/>
 
@@ -114,6 +114,7 @@ Usando módulos ES, no estamos obligados a usar algunas herramientas de ensambla
 ## 🧬 TypeScript nativo {#typescript-nativo}
 
 Deno simplifica el uso de **TypeScript**, eliminando la necesidad de que los desarrolladores configuren cualquier cosa para ejecutarlo. A su vez, los programas Deno también se pueden escribir en JavaScript sin problemas.
+
 Esto viene a confirmar, una vez más que TypeScript se ha convertido en un standard de facto en el mundo JS.
 
 <Separator/>
@@ -131,6 +132,7 @@ Ejecutando `$ deno test test.ts` tenemos directamente nuestros tests corriendo
 # 🎉 Conclusiones {#conclusiones}
 
 Aunque su logo sea un **dinosaurio**, Deno no tiene nada de prehistórico y su propuesta es realmente novedosa. Si bien es pronto para estimar si le ganará terreno a NodeJS, parece claro que Deno viene a mejorar los puntos débiles de éste.
+
 La pinta es **espectacular** y tiene muchos ingredientes como para darle una oportunidad y seguir de cerca su evolución. Podéis hacerlo en su **[repo](https://github.com/denoland/deno)** si estáis interesados.
 
 <Separator/>

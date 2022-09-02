@@ -12,7 +12,7 @@ const toTop = () => {
 <template>
   <div class="fixed right-5 bottom-5 z-1">
     <button
-      :class="`bg-base-400 p-4 shadow rounded-1/2 ${
+      :class="`to-top-btn bg-base-400 p-4 shadow rounded-1/2 ${
         y < 350 ? 'hidden' : 'block'
       } hover:shadow-lg`"
       @click="toTop"
@@ -21,3 +21,9 @@ const toTop = () => {
     </button>
   </div>
 </template>
+
+<style lang="scss">
+  .to-top-btn {
+    line-height: 1.15;
+  }
+</style>
