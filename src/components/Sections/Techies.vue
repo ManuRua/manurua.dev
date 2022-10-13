@@ -23,7 +23,7 @@ const techies: TechiesList[] = [
     light: Golang,
   },
   {
-    name: "clean-architectures",
+    name: "arquiteturas-limpias",
     light: CleanArchs,
   },
   {

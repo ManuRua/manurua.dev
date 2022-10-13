@@ -131,11 +131,11 @@ const dataNavbar: NavbarMenu[] = [
           <carbon-table-of-contents class="mr-2" />b-log
         </li>
       </router-link>
-      <router-link to="/about" class="bg-base-50 dark:bg-base-500 p-2 mb-2 rounded-md">
+      <!-- <router-link to="/about" class="bg-base-50 dark:bg-base-500 p-2 mb-2 rounded-md">
         <li class="flex flex-row flex-wrap items-center dark:text-base-100">
           <uil-document-layout-center class="mr-2" />sobre mí
         </li>
-      </router-link>
+      </router-link> -->
     </ul>
   </nav>
   <!-- Search -->

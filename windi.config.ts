@@ -46,9 +46,6 @@ export default defineConfig({
           5: "#FF4133",
         },
       },
-      animation: {
-        "fade-swing": "fadeInLeft 500ms ease 2000ms, swing 500ms ease-in 2300ms",
-      },
     },
   },
   plugins: [
