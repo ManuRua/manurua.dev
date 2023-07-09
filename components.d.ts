@@ -17,6 +17,7 @@ declare module 'vue' {
     CarbonTime: typeof import('~icons/carbon/time')['default']
     Footer: typeof import('./src/components/Footer/Footer.vue')['default']
     Latest: typeof import('./src/components/Articles/Latest.vue')['default']
+    LinkPreview: typeof import('./src/components/Articles/LinkPreview.vue')['default']
     Navbar: typeof import('./src/components/Navigation/Navbar.vue')['default']
     Paginate: typeof import('./src/components/Pagination/Paginate.vue')['default']
     Post: typeof import('./src/components/Articles/Post.vue')['default']

@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-2 flex social-links animate-fade-in animate-duration-1000">
+  <div class="mt-4 <sm:mt-2 flex social-links animate-fade-in animate-duration-1000">
     <a
       href="https://github.com/ManuRua"
       target="_blank"
@@ -41,6 +41,6 @@
 
 <style lang="scss">
 .social-links > a > svg {
-  @apply w-8 h-8 cursor-pointer text-base-700 dark:text-base-200 hover:text-gray-900 dark:hover:text-base-50;
+  @apply w-10 h-10 <sm:w-8 <sm:h-8 cursor-pointer text-base-700 dark:text-base-200 hover:text-gray-900 dark:hover:text-base-50;
 }
 </style>

@@ -18,12 +18,13 @@ const articles = computed(() => {
 </script>
 
 <template>
-  <div class="section mt-9vh mb-5vh">
-    <h3 class="text-xl text-base-700 dark:text-base-50 font-bold uppercase tracking-widest opacity-50">
+  <div class="section mt-9vh mb-5vh h-70vh">
+    <h3 class="text-2xl text-base-700 dark:text-base-50 font-bold uppercase tracking-widest opacity-50">
       hey! soy Manu Rúa
     </h3>
+    <!-- <LinkPreview url="https://github.com/ManuRua/deno-intro" /> -->
     <SocialLinks />
-    <h1 class="animate-fade-in animate-duration-1000 mt-10 mb-15 leading-tight text-5xl <sm:text-4xl text-base-900 dark:text-base-50 font-normal max-w-4xl">
+    <h1 class="animate-fade-in animate-duration-1000 mt-20 <sm:mt-15 leading-tight text-7xl <sm:text-4xl text-base-900 dark:text-base-50 font-normal max-w-4xl">
       <div class="inline-block"><span class="underlined before:bg-secondary-yellow-5 before:animate-ease-in-out">Ingeniero</span> <span class="underlined before:animate-ease-in-out before:bg-secondary-yellow-5">software</span></div> y <div class="inline-block"><span class="underlined before:bg-primary-blue-4 before:animate-ease-in-out before:animate-delay-400">creador</span> <span class="underlined before:bg-primary-blue-4 before:animate-ease-in-out before:animate-delay-400">digital</span></div> en remoto desde <div class="inline"><span class="underlined before:bg-secondary-red-5 before:animate-delay-1500 before:animate-ease-in-out">Sevilla</span></div>
     </h1>
   </div>

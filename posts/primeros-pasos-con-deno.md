@@ -151,4 +151,4 @@ La pinta es **espectacular** y tiene muchos ingredientes como para darle una o
 
 Puedes encontrar el código de los ejemplos en GitHub:
 
-https://github.com/ManuRua/deno-intro
+<!-- <LinkPreview url="https://github.com/ManuRua/deno-intro" /> -->
