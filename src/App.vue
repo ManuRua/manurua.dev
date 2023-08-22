@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { setCanonical } from "~/utils"
-
 // In this section, we use @vueuse/head. Check this for more detail
 // https://github.com/vueuse/head
 useHead({
@@ -104,7 +102,7 @@ useHead({
 <template>
   <div class="min-h-100vh overflow-hidden block relative pb-30 mx-auto flex flex-col">
     <Navbar />
-    <main class="mx-auto mt-4 min-h-prose w-full lg:max-w-screen-lg">
+    <main class="main mx-auto mt-4 px-4 min-h-prose w-full medias animate-fade-in animate-duration-3000 animate-fill-forwards">
       <router-view :key="$route.path" />
       <ToTopBtn />
     </main>

@@ -1,8 +1,8 @@
 import { ViteSSG } from "vite-ssg"
 import App from "./App.vue"
 import "virtual:windi.css"
-import routes from "virtual:generated-pages"
-import { RouterScrollBehavior } from "vue-router"
+import { routes } from 'vue-router/auto/routes'
+import { RouterScrollBehavior } from "vue-router/auto"
 import "~/assets/styles/style.scss"
 import "@purge-icons/generated"
 
@@ -13,6 +13,7 @@ const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
 }
 
 // https://github.com/antfu/vite-ssg
+console.log(routes);
 export const createApp = ViteSSG(App, { routes, scrollBehavior }, (ctx) => {
-  Object.values(import.meta.globEager("./module/*.ts")).map((i) => i.install?.(ctx))
+  Object.values(import.meta.glob("./module/*.ts", { eager: true })).map((i: any) => i.install?.(ctx))
 })

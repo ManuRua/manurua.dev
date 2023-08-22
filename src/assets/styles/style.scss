@@ -9,7 +9,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Fira Sans", sans-serif;
-  --scale-rate: 1.5;
+  --scale-rate: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,6 +17,7 @@
 html.dark {
   @apply bg-base-900;
 }
+
 a {
   @apply cursor-pointer;
 }
@@ -46,4 +47,12 @@ h1, h2, h3, h4, h5 {
   to {
     filter: blur(0);
   }
+}
+
+.medias {
+  @apply sm:max-w-screen-sm;
+  @apply md:max-w-screen-md;
+  @apply lg:max-w-screen-lg;
+  @apply xl:max-w-screen-xl;
+  @apply 2xl:max-w-screen-2xl;
 }

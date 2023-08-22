@@ -1,6 +1,8 @@
 import { defineConfig } from "vite"
 import Vue from "@vitejs/plugin-vue"
-import Pages from "vite-plugin-pages"
+// import Pages from "vite-plugin-pages"
+import VueRouter from 'unplugin-vue-router/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Components from "unplugin-vue-components/vite"
 import WindiCSS from "vite-plugin-windicss"
 import Markdown from "vite-plugin-md"
@@ -22,7 +24,6 @@ import ItAttrs from "markdown-it-attrs"
 // @ts-expect-error
 import LazyLoading from "markdown-it-image-lazy-loading"
 import { resolve } from "path"
-import { readFileSync } from "fs"
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -45,6 +46,27 @@ export default defineConfig({
         multipass: true,
       },
     }),
+    VueRouter({
+      dataFetching: true,
+      routesFolder: [
+        {
+          src: "src/pages",
+        },
+        {
+          src: "posts",
+          path: "posts/",
+          extensions: ['.md']
+        },
+      ],
+      extensions: [".vue", ".md"],
+      extendRoute(route) {
+        const path = resolve(__dirname, route.fullPath.slice(1))
+        if (route.name.startsWith('/posts/')) {
+          const { data } = matter.read(path + '.md')
+          route.meta = Object.assign(route.meta || {}, { frontmatter: data })
+        }
+      },
+    }),
     Vue({
       include: [/\.vue$/, /\.md$/],
     }),
@@ -52,7 +74,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-md
     Markdown({
       headEnabled: true,
-      wrapperComponent: "post",
+      wrapperComponent: "Post",
       markdownItOptions: {
         html: true,
         linkify: true,
@@ -64,10 +86,11 @@ export default defineConfig({
         md.use(Prism),
           md.use(ItAttrs),
           md.use(Anchor, {
-            permalink: true,
-            permalinkBefore: true,
-            permalinkSymbol: "#",
-            permalinkAttrs: () => ({ "aria-hidden": true }),
+            permalink: Anchor.permalink.linkInsideHeader({
+              placement: "before",
+              symbol: "#",
+              ariaHidden: true,
+            }),
           }),
           md.use(LinkAttrs, {
             pattern: /^https?:/,
@@ -78,31 +101,6 @@ export default defineConfig({
           }),
           md.use(Toc),
           md.use(LazyLoading)
-      },
-    }),
-
-    // https://github.com/hannoeru/vite-plugin-pages
-    Pages({
-      pagesDir: [
-        {
-          dir: "src/pages",
-          baseRoute: "",
-        },
-        {
-          dir: "posts",
-          baseRoute: "posts",
-        },
-      ],
-      extensions: ["vue", "md"],
-      extendRoute(route) {
-        // Get inspired from anthony fu"s personal website
-        // https://github.com/antfu/antfu.me
-        const path = resolve(__dirname, route.component.slice(1))
-        const md = readFileSync(path, "utf-8")
-        const { data } = matter(md)
-        if (path.split(".").pop() == "md") {
-          route.meta = Object.assign(route.meta || {}, { frontmatter: data })
-        }
       },
     }),
 
@@ -160,11 +158,11 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
-      imports: ["vue", "@vueuse/core", "@vueuse/head", "vue-router"],
+      imports: ["vue", "@vueuse/core", "@vueuse/head", VueRouterAutoImports],
       dts: true,
     }),
   ],
   optimizeDeps: {
-    include: ["vue", "vue-router", "@vueuse/core"],
-  },
+    include: ["vue", "vue-router", "@vueuse/core"]
+  }
 })

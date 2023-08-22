@@ -1,5 +1,5 @@
 ---
-name: Primeros pasos con Deno 🦕 El sucesor de NodeJS desarrollado con Rust y TypeScript
+name: "Primeros pasos con Deno 🦕\nEl sucesor de NodeJS desarrollado con Rust y TypeScript"
 description: Deno es el nuevo runtime multiplataforma para JavaScript y TypeScript desarrollado por Ryan Dahl, el creador de NodeJS. Basado en la V8 de Chrome, desarrollado en Rust y basado en TypeScript, llega para desterrar a éste de su reinado.
 thumbnail: /images/deno/deno_cover.jpeg
 thbn_src: https://deno.land
@@ -49,7 +49,7 @@ Podemos comprobar nuestra instalación ejecutando el script de bienvenida:
 
 Al echar la vista atrás, en cualquier proyecto que uno empezó hace mucho tiempo, piensas en las cosas que cambiarías si lo construyeras de nuevo y qué otras cosas no volverías a hacer. Lo mismo le ha pasado a **Ryan Dahl**, el cual ya en la **JSConf2018** dio una presentación con “10 things I regret about NodeJS”.
 
- <YouTube src="M3BM9TB-8yA" />
+ <!-- <YouTube src="https://www.youtube.com/watch?v=M3BM9TB-8yA" /> -->
 
 Entre las más famosas, está el conocido [callback hell](http://callbackhell.com/) que sigue siendo de base el mayor inconveniente para muchas librerías que aún continuan usando callbacks aún teniendo los [módulos](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import) de ECMAScript y las [promesas](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise).
 

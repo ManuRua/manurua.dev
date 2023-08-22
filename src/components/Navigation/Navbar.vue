@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { isDark, toggleDark, slug } from "~/utils"
 import type { NavbarMenu } from "~/types"
-import LogoSVG from "/public/logo.svg?component";
+import LogoSVG from "/src/assets/images/logo.svg?component";
 
 // https://vueuse.org/shared/useToggle/
 const [search, setSearch] = useToggle()
@@ -62,14 +62,14 @@ const dataNavbar: NavbarMenu[] = [
 
 <template>
   <nav
-    class="z-10 text-base-700 dark:text-base-400 relative h-20 px-4 animate-fade-in-down animate-duration-1000"
+    class="medias mx-auto w-full z-10 text-base-700 dark:text-base-400 relative h-36 px-4 animate-fade-in-down animate-duration-1000"
     role="navigation"
     aria-label="navbar"
   >
-    <div class="max-w-screen-lg mx-auto h-full flex flex-row items-center space-x-4">
+    <div class="h-full flex flex-row items-center space-x-4">
       <div class="logo flex-1">
         <router-link to="/" class="font-bold lg:tracking-wide text-2xl">
-          <LogoSVG class="w-16 fill-dark dark:fill-base-50" loading="lazy"/>
+          <LogoSVG class="w-16 fill-base-900 dark:fill-base-50" loading="lazy" />
         </router-link>
       </div>
       <div class="flex flex-wrap items-center justify-center">
@@ -85,26 +85,26 @@ const dataNavbar: NavbarMenu[] = [
           v-if="isDark"
           class="mr-5 cursor-pointer text-base-700 dark:text-base-200"
           tabindex="0"
-          @click="toggleDark"
-          title="Toggle light mode"
+          @click="toggleDark()"
+          name="Toggle light mode"
         />
         <carbon-moon
           v-else
           class="mr-5 cursor-pointer text-base-700 dark:text-base-200"
           tabindex="0"
-          @click="toggleDark"
-          title="Toggle dark mode"
+          @click="toggleDark()"
+          name="Toggle dark mode"
         />
         <carbon-search
           class="cursor-pointer text-base-700 dark:text-base-200"
           tabindex="0"
-          @click="setSearch"
-          title="Search articles.."
+          @click="setSearch()"
+          name="Search articles.."
         />
         <carbon-menu
           class="cursor-pointer text-base-700 dark:text-base-200 ml-5 sm:block lg:hidden"
           tabindex="0"
-          @click="setOpen"
+          @click="setOpen()"
         />
       </div>
     </div>

@@ -132,9 +132,9 @@ const dataShare: DataShare[] = [
   },
 ]
 
-/* 
-  Inspired by https://github.com/antfu/antfu.me/blob/HEAD/src/components/Post.vue
-*/
+// /* 
+//   Inspired by https://github.com/antfu/antfu.me/blob/HEAD/src/components/Post.vue
+// */
 if (isClient) {
   const navigate = () => {
     if (location.hash) {
@@ -163,7 +163,7 @@ if (isClient) {
 <template>
   <div class="py-5 px-4 lg:px-0">
     <h1
-      class="pb-5 text-base-900 dark:text-base-50 text-left font-bold text-3xl md:block md:text-5xl"
+      class="pb-5 text-base-900 dark:text-base-50 text-left font-bold text-3xl md:block md:text-5xl whitespace-pre-wrap"
     >
       {{ frontmatter.name }}
     </h1>
@@ -187,7 +187,7 @@ if (isClient) {
       <img
         :src="frontmatter.thumbnail"
         :alt="`thumbnail-${frontmatter.name}`"
-        class="w-full h-md object-cover rounded-md shadow-lg"
+        class="w-full h-md object-cover object-top rounded-md shadow-lg"
         loading="lazy"
       />
       <figcaption class="text-xs text-center text-dark-100 font-light mt-1 dark:text-base-50">
@@ -219,11 +219,6 @@ if (isClient) {
         :media="share.media"
       />
     </div>
-    <!-- <div class="mt-5 mb-5">
-      <client-only>
-        <Disqus />
-      </client-only>
-    </div> -->
     <div class="flex flex-wrap flex-col px-4 lg:px-0 mt-5">
       <h1 class="mb-5 mt-8 text-3xl text-base-700 dark:text-base-400 font-bold">
         Artículos Relacionados
@@ -236,6 +231,7 @@ if (isClient) {
           :alt="`blog-banner-${slug(data.meta.frontmatter.name)}`"
           :tags="data.meta.frontmatter.tags"
           :date="`${new Date(frontmatter.date).toLocaleDateString('es-ES', dateOptions)}`"
+          :time="data.meta.frontmatter.time"
           :title="data.meta.frontmatter.name"
           :to="data.path"
           :description="limitString(data.meta.frontmatter.description, 200)"

@@ -26,7 +26,6 @@ Elucidator blog starter has several features such as:
 - Access thousands icons as Vue component in Vite using [Unplugin Icons](https://github.com/antfu/unplugin-icons)
 - Progress bar like youtube, github, etc using [Nprogress](https://github.com/rstacruz/nprogress)
 - Code syntax highlighter using [Prismjs](https://prismjs.com/)
-- Comment the article using [Vue Disqus](https://github.com/ktquez/vue-disqus)
 - Share your article using [Vue Social Sharing](https://github.com/nicolasbeauvais/vue-social-sharing)
 - Auto importing several package using [Unplugin Auto Import](https://github.com/antfu/unplugin-auto-import)
 - Typescript support :D
@@ -42,10 +41,6 @@ In this blog starter, we have several components to easier own your blog, and if
 - Tag Component
 - To Top Button
 - Pagination
-
-# Comment System
-
-Since this starter use disqus for comment system, first you should get the shortname, you can get the shortname from the official website [disqus](https://disqus.com/) and if you have the shortname, make sure you have to fill the value in the `.env` file. For more detail, you can read the documentation from [Vue Disqus](https://ktquez.github.io/vue-disqus/).
 
 # Usage and Installation
 

@@ -25,7 +25,7 @@ const props = defineProps<{
             >{{ time }} minutos de lectura</span
           >
         </div>
-        <h1 class="text-xl text-base-800 font-bold p-1 mb-1">{{ title }}</h1>
+        <h1 class="text-xl text-base-800 font-bold p-1 mb-1 whitespace-pre-wrap">{{ title }}</h1>
       </div>
       <div class="article-content-bottom">
         <Tag :tags="tags" class="mb-5 flex flex-wrap flex-row justify-start" />

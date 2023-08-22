@@ -45,6 +45,11 @@ export default defineConfig({
           4: "#FF6053",
           5: "#FF4133",
         },
+        "extra": {
+          1: "#47BB9D",
+          2: "#F37A53",
+          3: "#C963BF"
+        }
       },
     },
   },

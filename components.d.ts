@@ -18,6 +18,7 @@ declare module 'vue' {
     CarbonSun: typeof import('~icons/carbon/sun')['default']
     CarbonTableOfContents: typeof import('~icons/carbon/table-of-contents')['default']
     CarbonTime: typeof import('~icons/carbon/time')['default']
+    CarbonWarningAltFilled: typeof import('~icons/carbon/warning-alt-filled')['default']
     Footer: typeof import('./src/components/Footer/Footer.vue')['default']
     Latest: typeof import('./src/components/Articles/Latest.vue')['default']
     LinkPreview: typeof import('./src/components/Articles/LinkPreview.vue')['default']
