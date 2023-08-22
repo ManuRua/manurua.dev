@@ -1,6 +1,4 @@
 <script setup lang="ts">
-// In this section, we use @vueuse/head. Check this for more detail
-// https://github.com/vueuse/head
 useHead({
   title: "Manu Rúa | Desarrollo Backend con Golang, Web3, Gestión con Notion",
   meta: [

@@ -17,12 +17,10 @@ Elucidator blog starter is a starter blog built with [Vuejs 3](https://v3.vuejs.
 Elucidator blog starter has several features such as:
 
 - Utilities Vue Composition API using [Vueuse](https://vueuse.org/)
-- Document head manager for Vue 3 [Vueuse head](https://github.com/vueuse/head)
 - Next generation utility first CSS framework using [WindiCSS](https://windicss.org)
 - Style with [SCSS](https://sass-lang.com/)
 - File system based route generator using [Vite Plugin Pages](https://github.com/hannoeru/vite-plugin-pages)
 - Auto importing component using [Unplugin Vue Components](https://github.com/antfu/unplugin-vue-components)
-- Markdown with Vue for Vite using [Vite Plugin Md](https://github.com/antfu/vite-plugin-md)
 - Access thousands icons as Vue component in Vite using [Unplugin Icons](https://github.com/antfu/unplugin-icons)
 - Progress bar like youtube, github, etc using [Nprogress](https://github.com/rstacruz/nprogress)
 - Code syntax highlighter using [Prismjs](https://prismjs.com/)

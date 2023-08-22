@@ -1,11 +1,12 @@
 import { defineConfig } from "vite"
 import Vue from "@vitejs/plugin-vue"
-// import Pages from "vite-plugin-pages"
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import { unheadVueComposablesImports } from '@unhead/vue'
+import UnheadVite from '@unhead/addons/vite'
 import Components from "unplugin-vue-components/vite"
 import WindiCSS from "vite-plugin-windicss"
-import Markdown from "vite-plugin-md"
+import Markdown from "unplugin-vue-markdown/vite"
 import matter from "gray-matter"
 import Icons from "unplugin-icons/vite"
 import IconsResolver from "unplugin-icons/resolver"
@@ -41,13 +42,13 @@ export default defineConfig({
     "process.env": process.env,
   },
   plugins: [
+    UnheadVite(),
     SVGLoader({
       svgoConfig: {
         multipass: true,
       },
     }),
     VueRouter({
-      dataFetching: true,
       routesFolder: [
         {
           src: "src/pages",
@@ -71,9 +72,8 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
 
-    // https://github.com/antfu/vite-plugin-md
     Markdown({
-      headEnabled: true,
+      headEnabled: 'unhead',
       wrapperComponent: "Post",
       markdownItOptions: {
         html: true,
@@ -158,7 +158,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
-      imports: ["vue", "@vueuse/core", "@vueuse/head", VueRouterAutoImports],
+      imports: ["vue", "@vueuse/core", unheadVueComposablesImports, VueRouterAutoImports],
       dts: true,
     }),
   ],
