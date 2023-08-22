@@ -34,9 +34,9 @@
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.4",
     "vue": "^3.3.4",
+    "vue-lite-youtube-embed": "^1.2.0",
     "vue-router": "^4.2.4",
     "vue-social-sharing": "4.0.0-alpha4",
-    "vue3-youtube": "^0.1.9",
     "workbox-window": "^7.0.0"
   },
   "devDependencies": {

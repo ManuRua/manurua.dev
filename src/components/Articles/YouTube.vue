@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import YouTube from "vue3-youtube"
+import LiteYouTubeEmbed from "vue-lite-youtube-embed"
+import 'vue-lite-youtube-embed/style.css'
 
 const props = defineProps<{
   src: string
+  title: string
 }>()
 </script>
 <template>
-  <YouTube
-    :src="src"
-    width="100%"
-    height="100%"
-    ref="youtube"
-    class="m-auto <md:w-auto <sm:h-xs w-2xl h-sm my-10"
+  <LiteYouTubeEmbed
+    :id="src"
+    :title="title"
+    poster="maxresdefault"
+    :webp="true"
   />
 </template>

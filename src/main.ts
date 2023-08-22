@@ -13,7 +13,6 @@ const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
 }
 
 // https://github.com/antfu/vite-ssg
-console.log(routes);
 export const createApp = ViteSSG(App, { routes, scrollBehavior }, (ctx) => {
   Object.values(import.meta.glob("./module/*.ts", { eager: true })).map((i: any) => i.install?.(ctx))
 })

@@ -84,23 +84,23 @@ export default defineConfig({
       wrapperClasses: "article-body mb-5",
       markdownItSetup(md) {
         md.use(Prism),
-          md.use(ItAttrs),
-          md.use(Anchor, {
-            permalink: Anchor.permalink.linkInsideHeader({
-              placement: "before",
-              symbol: "#",
-              ariaHidden: true,
-            }),
+        md.use(ItAttrs),
+        md.use(Anchor, {
+          permalink: Anchor.permalink.linkInsideHeader({
+            placement: "before",
+            symbol: "#",
+            ariaHidden: true,
           }),
-          md.use(LinkAttrs, {
-            pattern: /^https?:/,
-            attrs: {
-              target: "_blank",
-              rel: "noopener",
-            },
-          }),
-          md.use(Toc),
-          md.use(LazyLoading)
+        }),
+        md.use(LinkAttrs, {
+          pattern: /^https?:/,
+          attrs: {
+            target: "_blank",
+            rel: "noopener",
+          },
+        }),
+        md.use(Toc),
+        md.use(LazyLoading)
       },
     }),
 

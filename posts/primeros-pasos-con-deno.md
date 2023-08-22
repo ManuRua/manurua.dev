@@ -49,7 +49,7 @@ Podemos comprobar nuestra instalación ejecutando el script de bienvenida:
 
 Al echar la vista atrás, en cualquier proyecto que uno empezó hace mucho tiempo, piensas en las cosas que cambiarías si lo construyeras de nuevo y qué otras cosas no volverías a hacer. Lo mismo le ha pasado a **Ryan Dahl**, el cual ya en la **JSConf2018** dio una presentación con “10 things I regret about NodeJS”.
 
- <!-- <YouTube src="https://www.youtube.com/watch?v=M3BM9TB-8yA" /> -->
+ <YouTube src="M3BM9TB-8yA" title="10 Cosas de las que me arrepiento de Node.js - Ryan Dahl - JSConf EU 2018"/>
 
 Entre las más famosas, está el conocido [callback hell](http://callbackhell.com/) que sigue siendo de base el mayor inconveniente para muchas librerías que aún continuan usando callbacks aún teniendo los [módulos](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import) de ECMAScript y las [promesas](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise).
 
@@ -65,7 +65,7 @@ Deno tiene el foco puesto en este apartado con el objetivo de evitar situaciones
 
 El siguiente ejemplo intenta acceder al file system para crear el fichero test.txt:
 
-![filesystem-code](/images/deno/filesystem-code.png "filesystem-code")
+<img src="/images/deno/filesystem-code.png" alt="filesystem-code" title="filesystem-code" loading="lazy" style="max-width:50rem;">
 
 Probamos a ejecutar el script: `$ deno run fsPermissionDenied.ts` y recibimos el siguiente error:
 
@@ -92,7 +92,7 @@ Al iniciar la aplicación, Deno carga todos los módulos importados y los almace
 
 Es muy interesante el hecho de que si nos resulta tedioso especificar constantemente las URLs de los módulos a importar, Deno nos ofrece la posibilidad de gestionar de forma más cortas estas importaciones mediante la *reexportación* desde otro **archivo local** o la creación de un **mapa de importación** en formato JSON, solución similiar al Webpack alias o TypeScript path alias.
 
-![imports-code](/images/deno/imports-code.png "imports-code")
+<img src="/images/deno/imports-code.png" alt="imports-code" title="imports-code" loading="lazy" style="max-width:50rem;">
 
 Al usar `import { serve } from "http/server.ts";` en cualquier fichero, Deno resuelve la importación (siempre que pasemos el flag `--importmap`) del paquete.
 
@@ -123,7 +123,7 @@ Esto viene a confirmar, una vez más que TypeScript se ha convertido en un stand
 
 Deno dispone de una **[librería standard](https://deno.land/std/)** que no solo nos va a permitir interactuar con el filesystem como hemos visto si no que también ofrece un total soporte para el [networking](https://deno.land/std/http/) y un completo [suite de testing](https://deno.land/std/testing):
 
-![asserts-testing-code](/images/deno/asserts-testing-code.png "asserts-testing-code")
+<img src="/images/deno/asserts-testing-code.png" alt="asserts-testing-code" title="asserts-testing-code" loading="lazy" style="max-width:50rem;">
 
 Ejecutando `$ deno test test.ts` tenemos directamente nuestros tests corriendo.
 
